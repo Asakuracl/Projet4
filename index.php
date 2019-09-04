@@ -22,9 +22,14 @@
         <div class="news">
             <h3>
                 <?php echo htmlspecialchars($dataPosts['title']); ?>
-                le <?php echo $dataPosts['creation_date_fr']; ?>
+                <br>le <?php echo $dataPosts['creation_date_fr']; ?>
             </h3>
-    
+            
+            <p>
+                <?php 
+                echo nl2br(htmlspecialchars($dataPosts['content']));
+                ?>
+            </p>
     </section>
         <?php
         }
