@@ -13,14 +13,14 @@
     
     <section>
         <p><a href="index.php">Retour à la liste des chapitres</a></p>
-        
+
             <?php
             $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'AsakuraCl+4', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            $req = $db->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
-            
-            while($dataPosts= $req->fetch())
-            {
+            $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin\') AS creation_date_fr FROM posts WHERE id = ?');
+            $req->execute(array($_GET['post']));
+            $dataPosts = $req->fetch();
             ?>
+            
             <div class="news">
             <a class="link-content" href=comment.php?post=<?php echo $dataPosts['id']
             ?></a>
