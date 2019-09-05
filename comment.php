@@ -35,6 +35,19 @@
     </section>
         <?php
         $req->closeCursor();
+
+        $req = $db ->prepare('SELECT author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date');
+        $req->execute(array($_GET['post']));
+
+        while($dataComments = $req->fetch())
+        {
+        ?>
+            <p><?php echo htmlspecialchars($dataComments['author'].':'); ?>
+            le <?php echo $dataComments['comment_date_fr']; ?></p>
+            <p><?php echo nl2br(htmlspecialchars($dataComments['comment'])); ?></p>
+        <?php
+        }
+        $req->closeCursor();
         ?>
 </body>
 </html>
