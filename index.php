@@ -35,7 +35,6 @@
                 </p>
             </div>
             
-            
             <?php
             }
             $req->closeCursor();
