@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Billet simple pour l'Alaska</h1>
+    <header class="row">
+        <div class=col>
+            <h1>Billet simple pour l'Alaska</h1>
+        </div>
     </header>
     
-    <section>
+    <section class="row">
         <p><a href="index.php">Retour à la liste des chapitres</a></p>
 
             <?php
@@ -21,7 +23,7 @@
             $dataPosts = $req->fetch();
             ?>
             
-            <div class="news">
+            <div class="col-6 offset-3">
                 <h3>
                     <?php echo htmlspecialchars($dataPosts['title']); ?>
                 </h3>
