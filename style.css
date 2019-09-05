@@ -1,0 +1,13 @@
+.style {
+  background: #ccd1d1;
+}
+
+.news {
+  margin: 1em 1.3em 1em 0;
+  transition: transform 0.7s ease;
+}
+
+.news:hover {
+  box-shadow: 0em 0em 0.5em #003943;
+  transform: scale(1.1);
+}
