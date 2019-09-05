@@ -28,12 +28,10 @@
                 <a href="comment.php?post=<?php echo $dataPosts['id']; ?>">
                     <h3>
                         <?php echo htmlspecialchars($dataPosts['title']); ?>
-                        
                     </h3>
                 </a>
                 <p>
                     <br>le <?php echo $dataPosts['creation_date_fr']; ?>
-                    
                 </p>
             </div>
             
