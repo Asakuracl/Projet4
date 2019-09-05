@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Document</title>
 </head>
-<body>
+<body class="main-body">
     <div class="container">
         <header class="row">
             <div class=col>
@@ -16,7 +16,7 @@
             </div>
         </header>
         
-        <section class="row">
+        <section class="first-section row">
             <?php
             $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'AsakuraCl+4', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             $req = $db->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
@@ -24,7 +24,7 @@
             while($dataPosts= $req->fetch())
             {
             ?>
-            <div class="col-sm-4 news">
+            <div class="post col-sm-4 news rounded  border">
                 <a href="comment.php?post=<?php echo $dataPosts['id']; ?>">
                     <h3>
                         <?php echo htmlspecialchars($dataPosts['title']); ?>
