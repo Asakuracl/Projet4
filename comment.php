@@ -22,8 +22,6 @@
             ?>
             
             <div class="news">
-            <a class="link-content" href=comment.php?post=<?php echo $dataPosts['id']
-            ?></a>
                 <h3>
                     <?php echo htmlspecialchars($dataPosts['title']); ?>
                     <br>le <?php echo $dataPosts['creation_date_fr']; ?>
