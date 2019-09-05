@@ -24,7 +24,6 @@
             <div class="news">
                 <h3>
                     <?php echo htmlspecialchars($dataPosts['title']); ?>
-                    <br>le <?php echo $dataPosts['creation_date_fr']; ?>
                 </h3>
                 
                 <p>
@@ -35,7 +34,6 @@
             </div>
     </section>
         <?php
-        }
         $req->closeCursor();
         ?>
 </body>
