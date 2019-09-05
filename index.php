@@ -26,12 +26,6 @@
                 <?php echo htmlspecialchars($dataPosts['title']); ?>
                 <br>le <?php echo $dataPosts['creation_date_fr']; ?>
             </h3>
-            
-            <p>
-                <?php 
-                echo nl2br(htmlspecialchars($dataPosts['content']));
-                ?>
-            </p>
         </div>
     </section>
         <?php
