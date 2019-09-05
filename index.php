@@ -24,8 +24,8 @@
             while($dataPosts= $req->fetch())
             {
             ?>
-            <div class="post col-sm-4 news rounded  border">
-                <a href="comment.php?post=<?php echo $dataPosts['id']; ?>">
+            <div class="news col-lg-4 rounded  border">
+                <a class="link-comment href="comment.php?post=<?php echo $dataPosts['id']; ?>">
                     <h3>
                         <?php echo htmlspecialchars($dataPosts['title']); ?>
                     </h3>
