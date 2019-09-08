@@ -1,7 +1,7 @@
 <?php
     require('model.php');
 
-    $req = getPosts();
+    $posts = getPosts();
 
     require('view.php');
-?>
+
