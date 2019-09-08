@@ -19,23 +19,23 @@
         
         <section class="first-section row">
             <?php
-            while($dataPosts= $req->fetch())
+            while($dataPosts= $posts->fetch())
             {
             ?>
             <div class="news col-lg-4 rounded  border">
                 <a class="link-comment" href="comment.php?post=<?php echo $dataPosts['id']; ?>">
                     <h3>
-                        <?php echo htmlspecialchars($dataPosts['title']); ?>
+                        <?= htmlspecialchars($dataPosts['title']); ?>
                     </h3>
                 </a>
                 <p>
-                    <br>le <?php echo $dataPosts['creation_date_fr']; ?>
+                    <br>le <?= $dataPosts['creation_date_fr']; ?>
                 </p>
             </div>
             
             <?php
             }
-            $req->closeCursor();
+            $posts->closeCursor();
             ?>
         </section>
     </div>
