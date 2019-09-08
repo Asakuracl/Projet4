@@ -6,4 +6,4 @@ function getPosts(){
 
     return $req;
 }
-?>
+
