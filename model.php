@@ -7,3 +7,4 @@ function getPosts(){
     return $req;
 }
 
+// test
