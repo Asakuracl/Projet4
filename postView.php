@@ -16,39 +16,33 @@
     </header>
     
     <section class="row post">
-   
-            
             <div class="col-6 offset-3">
                 <h3>
-                    <?php echo htmlspecialchars($post['title']); ?>
+                    <?= htmlspecialchars($post['title']); ?>
                 </h3>
                 
                 <p>
-                    <?php 
-                    echo nl2br(htmlspecialchars($post['content']));
-                    ?>
+                    <?= nl2br(htmlspecialchars($post['content'])); ?>
                 </p>
             </div>
                 <p class="col-6 offset-3"><a href="index.php">Retour à la liste des chapitres</a>
                 </p>
     </section>
         <?php
-    
-        while($dataComments = $req->fetch())
+        while($comment = $comments->fetch())
         {
         ?>
             <section class="row comment">
                 <div class="col-6 offset-3">
                     <p>
-                        <?php echo htmlspecialchars($dataComments['author'].':'); ?>
-                        le <?php echo $dataComments['comment_date_fr']; ?>
+                        <?= htmlspecialchars($comment['author'].':'); ?>
+                        le <?= $comment['comment_date_fr']; ?>
                     </p>
                     <p>
-                        <?php echo nl2br(htmlspecialchars($dataComments['comment'])); ?>
+                        <?= nl2br(htmlspecialchars($comment['comment'])); ?>
                     </p>
                         <?php
                         }
-                        $req->closeCursor();
                         ?>
                 </div>
             </section>
