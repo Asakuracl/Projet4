@@ -30,4 +30,6 @@ function getPost($postId){
 
 function dbConnect(){
      $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+      return $db;
 }
