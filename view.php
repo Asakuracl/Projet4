@@ -23,7 +23,7 @@
             {
             ?>
             <div class="news col-lg-4 rounded  border">
-                <a class="link-comment" href="comment.php?post=<?= $dataPosts['id']; ?>">
+                <a class="link-comment" href="postView.php?post=<?= $dataPosts['id']; ?>">
                     <h3>
                         <?= htmlspecialchars($dataPosts['title']); ?>
                     </h3>
