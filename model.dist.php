@@ -17,16 +17,14 @@ function getPost($postId){
     return $post;
 }
 
-/*
-//function getComments($postId){
-    $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
+function getComments($postId){
+    $db =  dbConnect();
     $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE post_id=? ORDER BY comment_date DESC');
     $comments->execute(array($postId));
 
     return $comments;
 }
-*/
+
 
 function dbConnect(){
      $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
