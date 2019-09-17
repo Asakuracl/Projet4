@@ -16,21 +16,16 @@
     </header>
     
     <section class="row post">
-        <?php
-        $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'AsakuraCl+4', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin\') AS creation_date_fr FROM posts WHERE id = ?');
-        $req->execute(array($_GET['post']));
-        $dataPosts = $req->fetch();
-        ?>
+   
             
             <div class="col-6 offset-3">
                 <h3>
-                    <?php echo htmlspecialchars($dataPosts['title']); ?>
+                    <?php echo htmlspecialchars($post['title']); ?>
                 </h3>
                 
                 <p>
                     <?php 
-                    echo nl2br(htmlspecialchars($dataPosts['content']));
+                    echo nl2br(htmlspecialchars($post['content']));
                     ?>
                 </p>
             </div>
