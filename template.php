@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title><?= $title ?></title>
 </head>
-<body>
-    <?= $content ?>
+<?= $content ?>
 
 <!-- script -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
