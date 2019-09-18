@@ -15,7 +15,7 @@
             {
             ?>
             <div class="news col-lg-4 rounded  border">
-                <a class="link-comment" href="post.php?id=<?= $dataPosts['id']; ?>">
+                <a class="link-comment" href="index.php?action=post&amp;id=<?= $dataPosts['id']; ?>">
                     <h3>
                         <?= htmlspecialchars($dataPosts['title']); ?>
                     </h3>
