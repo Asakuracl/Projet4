@@ -25,6 +25,14 @@ function getComments($postId){
     return $comments;
 }
 
+function postComment($postId, $author, $comment){
+    $db = dbConnect();
+
+    $comments = $db->prepare('INSERT INTO comments (post_id, author, comment, comment_date) VALUES(?, ?, ?, Now())');
+    $addComment = $comments->execute(array($postId, $author, $comment));
+
+    return $addComment;
+}
 
 function dbConnect(){
      $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
