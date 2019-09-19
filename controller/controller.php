@@ -1,15 +1,15 @@
 <?php
-    require('model.php');
+    require('model\model.php');
 
     function listPosts(){
         $posts = getPosts();
 
-        require('view.php');
+        require('view\frontend\view.php');
     }
 
     function post(){
         $post = getPost($_GET['id']);
         $comments = getComments($_GET['id']);
 
-        require('postView.php');
+        require('view\frontend\postView.php');
     }
