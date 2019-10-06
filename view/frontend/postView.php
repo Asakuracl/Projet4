@@ -17,10 +17,9 @@
                 <p>
                     <?= nl2br(htmlspecialchars($post['content'])); ?>
                 </p>
-            </div>
 
-            <h2>Commentaires</h2>
-/*
+                <h2>Commentaires</h2>
+
                 <form action="index.php?action=addComment&id=<?php echo $post['id'] ?>" method="post">
                     <div>
                         <label for="author">Auteur</label><br>
@@ -34,7 +33,8 @@
                         <input type="submit" />
                     </div>
                 </form>
-            */
+            </div>
+
                 <p class="col-6 offset-3"><a href="index.php">Retour à la liste des chapitres</a>
                 </p>
     </section>
