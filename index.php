@@ -8,13 +8,13 @@ require('controller\frontend.php');
         elseif ($_GET['action'] == 'post'){
             if (isset($_GET['id']) && $_GET['id'] > 0){
                 post();
-        }
+            }
             else {
             echo 'Erreur : aucun identifiant de billet envoyé';
             }
 
-            }
-        } else {
-            listPosts(); 
+        }
+    } else { 
+        listPosts(); 
     }
 
