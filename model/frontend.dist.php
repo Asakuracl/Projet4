@@ -35,7 +35,7 @@ function postComment($postId, $author, $comment){
 }
 
 function dbConnect(){
-     $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+     $db = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', '***', '***');
 
       return $db;
 }
