@@ -1,7 +1,8 @@
 <?php
 require('controller\frontend.php');
 
-    if (isset($_GET['action'])) {
+try{
+ if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts'){
             listPosts();
         } 
@@ -10,7 +11,7 @@ require('controller\frontend.php');
                 post();
             }
             else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+            throw new Exception("Erreur : aucun identifiant de billet envoyé");
             }
         }
         elseif ($_GET['action'] == 'addComment'){
@@ -19,14 +20,18 @@ require('controller\frontend.php');
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
                 }
                 else {
-                echo 'Erreur : merci de renseigner tous les champs';
+                throw new Exception("Erreur : merci de renseigner tous les champs");
                 }
             }
             else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+            throw new Exception("Erreur : aucun identifiant de billet envoyé");
             }
         }
     } else { 
         listPosts(); 
     }
+}
+catch(Exception $e){
+    echo 'Erreur : ' .$e ->getMessage();
+}
 
