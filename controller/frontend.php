@@ -13,3 +13,13 @@
 
         require('view\frontend\postView.php');
     }
+
+    function addComment($postId, $author, $comment){
+        $addComment = postComment($postId, $author, $comment);
+
+        if ($addComment === false){
+            die("Erreur d'ajout du commentaire");
+        } else{
+            header("Location: index.php?action=post&id=" . $postId);
+        }
+    }
