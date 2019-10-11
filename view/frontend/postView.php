@@ -20,7 +20,7 @@
 
             <h2>Commentaires</h2>
 
-            <form action="index.php?action=addComment&id=<?php echo $post['id'] ?>" method="post">
+            <form action="index.php?action=addComment&amp;id=<?php echo $post['id'] ?>" method="post">
                 <div>
                     <label for="author">Auteur</label><br>
                     <input type="text" id="author" name="author" />
