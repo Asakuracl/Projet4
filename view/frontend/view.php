@@ -29,7 +29,7 @@
             $posts->closeCursor();
             ?>
              <!-- zone de test -->
-            <form action="index.php?action=addPost&amp;id=<?php echo $post['id'] ?>" method="post">
+            <form action="index.php" method="post">
                 <div>
                     <label for="title">Titre</label><br>
                     <input type="text" id="title" name="title" />
