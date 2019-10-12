@@ -31,9 +31,9 @@ function addComment($postId, $author, $comment){
 }
 
 //
-function newPost($title, $content){
+function addPost($title, $content){
     $postManager = new PostManager();
-    $newPost = $postManager->addPosts($title, $content);
+    $addPost = $postManager->newPost($title, $content);
 
     if ($newPost === false){
         die("Erreur d'ajout du billet");
