@@ -24,8 +24,11 @@
                     <br>le <?= $dataPosts['creation_date_fr']; ?>
                 </p>
             </div>
-            
-            <!-- zone de test -->
+            <?php
+            }
+            $posts->closeCursor();
+            ?>
+             <!-- zone de test -->
             <form action="index.php?action=newPost&amp;id=<?php echo $post['id'] ?>" method="post">
                 <div>
                     <label for="title">Titre</label><br>
@@ -40,11 +43,6 @@
                 </div>
             </form>
             <!-- zone de test -->
-            
-            <?php
-            }
-            $posts->closeCursor();
-            ?>
         </section>
     </div>
 <?php $content = ob_get_clean() ?>
