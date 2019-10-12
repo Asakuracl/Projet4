@@ -5,7 +5,7 @@ require_once('model\CommentManager.php');
 function listPosts(){
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
-
+   
     require('view\frontend\view.php');
 }
 
@@ -35,7 +35,7 @@ function addPost($title, $content){
     $postManager = new PostManager();
     $addPost = $postManager->newPost($title, $content);
 
-    if ($newPost === false){
+    if ($addPost === false){
         die("Erreur d'ajout du billet");
     } else{
         header("Location: index.php");
