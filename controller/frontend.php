@@ -29,3 +29,16 @@ function addComment($postId, $author, $comment){
         header("Location: index.php?action=post&id=" . $postId);
     }
 }
+
+//
+function newPost($title, $content){
+    $postManager = new PostManager();
+    $newPost = $postManager->addPosts($title, $content);
+
+    if ($newPost === false){
+        die("Erreur d'ajout du billet");
+    } else{
+        header("Location: index.php");
+    }
+ }
+//
