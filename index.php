@@ -27,7 +27,7 @@ try{
             throw new Exception("Erreur : aucun identifiant de billet envoyé");
             }
         }
-        // revoir le routeur
+        // 
         elseif ($_GET['action'] == 'addPost'){
             if(!empty($_POST['title']) && !empty($_POST['content'])){
                 addPost($_POST['title'], $_POST['content']);
@@ -36,10 +36,6 @@ try{
                 throw new Exception("Erreur : merci de renseigner tous les champs");
                 }
             }
-            //else {
-            //throw new Exception("Erreur : aucun identifiant de billet envoyé");
-            //}
-        //}
         //
     } else { 
         listPosts(); 
