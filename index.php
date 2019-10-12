@@ -29,18 +29,17 @@ try{
         }
         // revoir le routeur
         elseif ($_GET['action'] == 'addPost'){
-            if (isset($_GET['id']) && $_GET['id'] > 0){
-                if(!empty($_POST['title']) && !empty($_POST['content'])){
-                    addPost($_GET['id'], $_POST['title'], $_POST['content']);
+            if(!empty($_POST['title']) && !empty($_POST['content'])){
+                addPost($_POST['title'], $_POST['content']);
                 }
                 else {
                 throw new Exception("Erreur : merci de renseigner tous les champs");
                 }
             }
-            else {
-            throw new Exception("Erreur : aucun identifiant de billet envoyé");
-            }
-        }
+            //else {
+            //throw new Exception("Erreur : aucun identifiant de billet envoyé");
+            //}
+        //}
         //
     } else { 
         listPosts(); 
