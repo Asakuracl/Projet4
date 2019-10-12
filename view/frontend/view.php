@@ -25,6 +25,22 @@
                 </p>
             </div>
             
+            <!-- zone de test -->
+            <form action="index.php?action=newPost&amp;id=<?php echo $post['id'] ?>" method="post">
+                <div>
+                    <label for="title">Titre</label><br>
+                    <input type="text" id="title" name="title" />
+                </div>
+                <div>
+                    <label for="content">Contenu</label><br>
+                    <textarea id="content" name="content"></textarea>
+                </div>
+                <div>
+                    <input type="submit" />
+                </div>
+            </form>
+            <!-- zone de test -->
+            
             <?php
             }
             $posts->closeCursor();
