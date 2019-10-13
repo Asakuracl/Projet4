@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title><?= $title ?></title>
 </head>
+<body class="main-body">
+    <div class="container">
+
+<header>
+    <div class="row">
+        <p class="col">Short Story</p>
+        <a class="offset-9 col" href="login.php?">
+            <p>Se connecter</p>
+        </a>
+    </div>
+
 <?= $content ?>
 
 <!-- script -->
