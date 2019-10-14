@@ -15,8 +15,6 @@
             <button type="submit" class="button-login"> Se connecter</button>
     </form>
 </section>
-
-</div>
 <?php $content = ob_get_clean() ?>
 
 <?php require("template.php"); ?>
