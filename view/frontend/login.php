@@ -1,6 +1,7 @@
 <?php $title = "Administration"; ?>
 
 <?php ob_start() ?>
+
 </header>
 <section class="row">
 <!-- creer le lien menant au controler dans action--> 
@@ -17,4 +18,4 @@
 </section>
 <?php $content = ob_get_clean() ?>
 
-<?php require("template.php"); ?>
+<?php require("template.php") ?>
