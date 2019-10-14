@@ -2,15 +2,17 @@
 
 <?php ob_start() ?>
 </header>
-<section>
-    <form action="" method="post">
-        <div class="form-nom">
-            <input type="text" name="name" placeholder="nom d'utilisateur">
-        </div>
-        <div class="form-groupe">
-            <input type="password" name="password" placeholder="mot de passe">
-        </div>
-        <button type="submit" class="button-login"> Se connecter</button>
+<section class="row">
+<!-- creer le lien menant au controler dans action--> 
+    <form class="col-6 offset-3" action="" method="post">
+        <p>Entrez vos identifiants :</p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" placehoclass="form-control lder="nom d'utilisateur">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="mot de passe">
+            </div>
+            <button type="submit" class="button-login"> Se connecter</button>
     </form>
 </section>
 
