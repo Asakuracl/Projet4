@@ -16,13 +16,13 @@
         <p class="col">Short Story</p>
         <ul class="nav">
             <li>
-                <a class="nav-link" href="index.php?">Accueil</a>
+                <a class="nav-link" href="/projet4/index.php">Accueil</a>
             </li>
             <li>
                 <a class="nav-link" href="/projet4/index.php?action=post&id=1">Chapitre</a>
             </li>
             <li>
-                <a class="nav-link" href="view\frontend\login.php">Se connecter</a>
+                <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
             </li>
         </ul>
     </div>
