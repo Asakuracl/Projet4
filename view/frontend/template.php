@@ -14,9 +14,17 @@
 <header>
     <div class="row">
         <p class="col">Short Story</p>
-        <a class="offset-9 col" href="view\frontend/login.php?">
-            <p>Se connecter</p>
-        </a>
+        <ul class="nav">
+            <li>
+                <a class="nav-link" href="index.php?">Accueil</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/projet4/index.php?action=post&id=1">Chapitre</a>
+            </li>
+            <li>
+                <a class="nav-link" href="view\frontend\login.php">Se connecter</a>
+            </li>
+        </ul>
     </div>
 
 <?= $content ?>
