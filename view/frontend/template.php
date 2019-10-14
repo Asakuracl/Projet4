@@ -14,7 +14,7 @@
 <header>
     <div class="row">
         <p class="col">Short Story</p>
-        <a class="offset-9 col" href="login.php?">
+        <a class="offset-9 col" href="view\frontend/login.php?">
             <p>Se connecter</p>
         </a>
     </div>
