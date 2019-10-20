@@ -45,9 +45,9 @@ function addPost($title, $content){
 //
 
 // vérifier qu'on est connecté
-function login($name, $pass){
+function login($nam, $pass){
     $logManager = new LogManager();
-    $login = $logManager->newPost($name, $pass);
+    $login = $logManager->checkLog($nam, $pass);
 
     if ($login === false){
         die("identifiant ou mot de passe, incorrect");
