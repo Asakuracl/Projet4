@@ -1,6 +1,6 @@
 <?php $title = "Administration"; ?>
 
-<?php ob_start() ?>
+<?php ob_start(); ?>
 
 </header>
 <section class="row">
@@ -16,6 +16,6 @@
             <button type="submit" class="button-login"> Se connecter</button>
     </form>
 </section>
-<?php $content = ob_get_clean() ?>
+<?php $content = ob_get_clean(); ?>
 
-<?php require("template.php") ?>
+<?php require("template.php"); ?>
