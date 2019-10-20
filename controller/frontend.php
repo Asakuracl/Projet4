@@ -1,6 +1,7 @@
 <?php
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
+require_once('model\LogManager.php');
 
 function listPosts(){
     $postManager = new PostManager();
@@ -30,7 +31,7 @@ function addComment($postId, $author, $comment){
     }
 }
 
-//
+// pour ajouter un post
 function addPost($title, $content){
     $postManager = new PostManager();
     $addPost = $postManager->newPost($title, $content);
@@ -39,6 +40,20 @@ function addPost($title, $content){
         die("Erreur d'ajout du billet");
     } else{
         header("Location: index.php");
+    }
+ }
+//
+
+// vérifier qu'on est connecté
+function login($name, $pass){
+    $logManager = new LogManager();
+    $login = $logManager->newPost($name, $pass);
+
+    if ($login === false){
+        die("identifiant ou mot de passe, incorrect");
+    } else{
+        header("Location: index.php");
+        // à modifier pour aller vers la page admin
     }
  }
 //
