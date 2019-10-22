@@ -5,7 +5,7 @@
 </header>
 <section class="row">
 <!-- creer le lien menant au controler dans action--> 
-    <form class="col-6 offset-3" action="index.php?action=login" method="post">
+    <form class="col-6 offset-3" action="/projet4/index.php?action=login" method="post">
         <p>Entrez vos identifiants :</p>
             <div class="form-group">
                 <input class="form-control" type="text" name="name" placehoclass="form-control lder="nom d'utilisateur">
