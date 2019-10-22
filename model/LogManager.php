@@ -18,8 +18,8 @@ class LogManager extends Manager{
     public function checkLog($nam, $pass){
         $db = $this->dbConnect();
 
-        $admins = $db->prepare('SELECT nam, pass, DATE_FORMAT(registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins');
-        $login = $admin->execute(array($name, $pass));
+        $admins = $db->prepare('SELECT nam, pass, DATE_FORMAT(registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins WHERE nam = ?');
+        $login = $admins->execute(array($nam));
 
         return $login;
     }
