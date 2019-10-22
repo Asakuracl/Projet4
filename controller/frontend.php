@@ -47,10 +47,6 @@ function addPost($title, $content){
 
 
 // vérifier qu'on est connecté
-function test(){
-    require('view\frontend\login.php');
-}
-
 function login($nam, $pass){
     $logManager = new LogManager();
     $login = $logManager->checkLog($nam, $pass);
