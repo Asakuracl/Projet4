@@ -27,10 +27,19 @@ try{
             throw new Exception("Erreur : aucun identifiant de billet envoyé");
             }
         }
-        // 
+        // addPost
         elseif ($_GET['action'] == 'addPost'){
             if(!empty($_POST['title']) && !empty($_POST['content'])){
                 addPost($_POST['title'], $_POST['content']);
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
+        // login
+        elseif ($_GET['action'] == 'login'){
+            if(!empty($_POST['name']) && !empty($_POST['password'])){
+                login($_POST['nam'], $_POST['pass']);
             }
             else {
             throw new Exception("Erreur : merci de renseigner tous les champs");
