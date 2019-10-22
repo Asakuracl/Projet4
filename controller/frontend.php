@@ -46,19 +46,5 @@ function addPost($title, $content){
  }
 
 
-// vérifier qu'on est connecté
-function login($nam, $pass){
-    $logManager = new LogManager();
-    $login = $logManager->checkLog($nam, $pass);
+// login
 
-    $passCorrect = password_verify($_POST['password'], $login['pass']);
-    
-    if(!$login){
-        echo 'test';
-        header("Location: index.php");
-    } else {
-        echo 'oui';
-        header("Location: index.php");
-    }
-    
- }

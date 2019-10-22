@@ -37,14 +37,7 @@ try{
             }
         }
         // login
-        elseif ($_GET['action'] == 'login'){
-            if(!empty($_POST['name']) && !empty($_POST['password'])){
-                login($_POST['nam'], $_POST['pass']);
-            }
-            else {
-            throw new Exception("Erreur : merci de renseigner tous les champs");
-            }
-        }
+        
         //
     } else { 
         listPosts(); 
