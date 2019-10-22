@@ -36,24 +36,33 @@ function addPost($title, $content){
     $postManager = new PostManager();
     $addPost = $postManager->newPost($title, $content);
 
+
+
     if ($addPost === false){
         die("Erreur d'ajout du billet");
     } else{
         header("Location: index.php");
     }
  }
-//
+
 
 // vérifier qu'on est connecté
+function test(){
+    require('view\frontend\login.php');
+}
+
 function login($nam, $pass){
     $logManager = new LogManager();
     $login = $logManager->checkLog($nam, $pass);
 
-    if ($login === false){
-        die("identifiant ou mot de passe, incorrect");
-    } else{
+    $passCorrect = password_verify($_POST['password'], $login['pass']);
+    
+    if(!$login){
+        echo 'test';
         header("Location: index.php");
-        // à modifier pour aller vers la page admin
+    } else {
+        echo 'oui';
+        header("Location: index.php");
     }
+    
  }
-//
