@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
 require_once('model\LogManager.php');
@@ -47,19 +49,20 @@ function addPost($title, $content){
 // login
 function checkLog($nickname, $pass){
     $logManager = new LogManager();
-    $checkLog = $logManager->logIn($nickname);
+    $check = $logManager->logIn($nickname);
     
-    $checkPass = password_verify($pass, $checkLog['pass']);
-
-    if(!$checkLog){
+    $checkPass = password_verify($pass, $check['pass']);
+   
+    if (!$check){
         echo "identifiant ou mot de passe incorrect";
     } else {
         if($checkPass){
-            session_start();
-            $_SESSION['id'] = $checkLog['id'];
-            $_SESSION['nickname'] = $checkLog['nickname'];
-            echo "bien!";
-            header("Location: index.php");
+            //session_start();
+            $_SESSION['id'] = $check['id'];
+            $_SESSION['nickname'] = $check['nickname'];
+            
+            header('Location: index.php');
+
         } else {
             echo "tu y arrivera, mais c'est pas ça !(mdp faux)";
         }
