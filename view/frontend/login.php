@@ -11,7 +11,7 @@
                 <input class="form-control" type="text" name="nickname" placehoclass="form-control lder="nom d'utilisateur">
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="mot de passe">
+                <input class="form-control" type="password" name="pass" placeholder="mot de passe">
             </div>
             <button type="submit" class="button-login"> Se connecter</button>
     </form>
