@@ -45,11 +45,11 @@ function addPost($title, $content){
 
 
 // login
-function checkLog($nickname){
+function checkLog($nickname, $pass){
     $logManager = new LogManager();
     $checkLog = $logManager->logIn($nickname);
     
-    $checkPass = password_verify($_POST['pass'], $checkLog['pass']);
+    $checkPass = password_verify($pass, $checkLog['pass']);
 
     if(!$checkLog){
         echo "identifiant ou mot de passe incorrect";
@@ -61,7 +61,7 @@ function checkLog($nickname){
             echo "bien!";
             header("Location: index.php");
         } else {
-            echo "tu y arrivera, mais c'est pas ça !";
+            echo "tu y arrivera, mais c'est pas ça !(mdp faux)";
         }
     }
  }
