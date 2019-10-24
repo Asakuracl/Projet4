@@ -68,3 +68,18 @@ function checkLog($nickname, $pass){
         }
     }
  }
+
+ //addmenber
+
+ function addMember($nickname, $pass){
+    $memberManager = new LogManager();
+    $addMember = $memberManager->createMember($nickname, $pass);
+
+    // think about if to check all
+    if ($addComment === false){
+        die("Erreur d'ajout du commentaire");
+    } else{
+        header("Location: index.php?action=post&id=" . $postId);
+    }
+}
+
