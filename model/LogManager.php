@@ -16,12 +16,12 @@ class LogManager extends Manager{
     }
 
     // addmenber
-    public function addMenber($nickname, $pass){
+    public function createMember($nickname, $pass){
         $db =  $this->dbConnect();
 
         $member = $db->prepare('INSERT INTO admins (nickname, pass, registration_date) VALUES(:nickname, :pass, CURDATE())');
-        $addMembers = $member->execute(array($nickname, $pass));
+        $createMembers = $member->execute(array($nickname, $pass));
 
-        return $addMembers;
+        return $createMember;
     }
 }
