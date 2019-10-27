@@ -74,12 +74,13 @@ function checkLog($nickname, $pass){
  function addMember($nickname, $pass){
     $memberManager = new LogManager();
     $addMember = $memberManager->createMember($nickname, $pass);
-
+    
+    //addname the post will get in the view
     // think about if to check all
-    if ($addComment === false){
-        die("Erreur d'ajout du commentaire");
+    if ($addMenber === false){
+        die("Erreur d'ajout du nickname");
     } else{
-        header("Location: index.php?action=post&id=" . $postId);
+        header("Location: index.php");
     }
 }
 
