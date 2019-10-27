@@ -3,6 +3,15 @@
 require_once('Manager.php');
 
 class LogManager extends Manager{
+
+    //getMember
+    public function getMember($nickname){
+        $db =  $this->dbConnect();
+        $req = $db->query('SELECT id, nickname, pass, DATE_FORMAT(registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins WHERE id=?');
+
+        return $req;
+    }
+
     // addmenber
     public function createMember($nickname, $pass){
         $db =  $this->dbConnect();
