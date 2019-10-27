@@ -37,15 +37,16 @@ try{
             }
         }
 
-        // login
-        elseif ($_GET['action'] == 'checkLog'){
+        // addmember
+        elseif ($_GET['action'] == 'addMember'){
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
-                checkLog($_POST['nickname'], $_POST['pass']);
+                addMember($_POST['nickname'], $_POST['pass']);
             }
             else {
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
+       
         
     } else { 
         listPosts(); 
