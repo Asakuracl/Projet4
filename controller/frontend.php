@@ -46,13 +46,7 @@ function addPost($title, $content){
  }
 
 //get listMember
-function listAdmin(){
-    $logManager = new LogManager();
-    //$postManager = new PostManager();
-    $admin = $logManager->getMember();
-   
-    require('view\frontend\login.php');
-}
+
 
 //addmenber
 function addMember($nickname, $pass){
