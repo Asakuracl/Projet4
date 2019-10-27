@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
@@ -45,40 +45,13 @@ function addPost($title, $content){
     }
  }
 
-
-// login
-function checkLog($nickname, $pass){
-    $logManager = new LogManager();
-    $check = $logManager->logIn($nickname);
-    
-    $checkPass = password_verify($pass, $check['pass']);
-   
-    if (!$check){
-        echo "identifiant ou mot de passe incorrect";
-    } else {
-        if($checkPass){
-            //session_start();
-            $_SESSION['id'] = $check['id'];
-            $_SESSION['nickname'] = $check['nickname'];
-            
-            header('Location: index.php');
-
-        } else {
-            echo "tu y arrivera, mais c'est pas ça !(mdp faux)";
-        }
-    }
- }
-
  //addmenber
-
  function addMember($nickname, $pass){
     $memberManager = new LogManager();
     $addMember = $memberManager->createMember($nickname, $pass);
     
-    //addname the post will get in the view
-    // think about if to check all
     if ($addMember === false){
-        echo "Erreur d'ajout du nickname";
+        die("Erreur d'ajout du nickname");
     } else{
         header("Location: index.php");
     }
