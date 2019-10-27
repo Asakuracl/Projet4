@@ -3,25 +3,24 @@
 require_once('Manager.php');
 
 class LogManager extends Manager{
-
-    // login
-    public function logIn($nickname){
-        $db =  $this->dbConnect();
-
-        $login = $db->prepare('SELECT id, nickname, pass, DATE_FORMAT( registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins WHERE nickname= :nickname');
-        $checkLog = $login->execute(array(
-            'nickname' => $nickname));
-
-        return $checkLog;
-    }
-
     // addmenber
     public function createMember($nickname, $pass){
         $db =  $this->dbConnect();
 
-        $member = $db->prepare('INSERT INTO admins (nickname, pass, registration_date) VALUES(:nickname, :pass, CURDATE())');
-        $createMembers = $member->execute(array($nickname, $pass));
+        $newMember = $db->prepare('INSERT INTO admins (nickname, pass, registration_date) VALUES(?, ?, Now())');
+        $addMember = $newMember->execute(array($nickname, $pass));
 
-        return $createMember;
+        return $addMember;
     }
+
+    /*
+      public function newPost($title, $content){
+        $db = $this->dbConnect();
+
+        $addPosts = $db->prepare('INSERT INTO posts (title, content, creation_date) VALUES(?, ?, Now())');
+        $addPost = $addPosts->execute(array($title, $content));
+
+        return $addPost;
+    }
+    */
 }
