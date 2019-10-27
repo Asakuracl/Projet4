@@ -4,23 +4,11 @@
 
 </header>
 <section class="row">
-<!-- creer le lien menant au controler dans action--> 
-    <form class="col-6 offset-3" action="/projet4/index.php?action=checkLog" method="post">
-        <p>Entrez vos identifiants :</p>
-            <div class="form-group">
-                <input class="form-control" type="text" name="nickname" placehoclass="form-control lder="nom d'utilisateur">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="password" name="pass" placeholder="mot de passe">
-            </div>
-            <button type="submit" class="button-login"> Se connecter</button>
-    </form>
-
     <!-- addMenber--> 
-    <form class="col-6 offset-3" action="/projet4/index.php?action=addMember" method="post">
+    <form class="col-6 offset-3" action="login.php?action=addMember" method="post">
         <p>Enregister vos identifiants :</p>
             <div class="form-group">
-                <input class="form-control" type="text" name="nickname" placehoclass="form-control lder="nom d'utilisateur">
+                <input class="form-control" type="text" name="nickname" placeholder="nom d'utilisateur">
             </div>
             <div class="form-group">
                 <input class="form-control" type="password" name="pass" placeholder="mot de passe">
