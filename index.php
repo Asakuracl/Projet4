@@ -36,8 +36,10 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
-
-        // addmember
+        
+        //getMember add router
+        
+        // addMember
         elseif ($_GET['action'] == 'addMember'){
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
                 addMember($_POST['nickname'], $_POST['pass']);
