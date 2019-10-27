@@ -5,21 +5,13 @@ require_once('Manager.php');
 class LogManager extends Manager{
 
     //getMember
-    public function getMember($adminId){
-        $db =  $this->dbConnect();
-        $req = $db->query('SELECT id, nickname, pass, DATE_FORMAT(registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins WHERE id=?');
-        
-        $req->execute(array($adminId));
-        $admin = $req->fetch();
-
-        return $admin;
-    }
+    
 
     // addmenber
     public function createMember($nickname, $pass){
         $db =  $this->dbConnect();
 
-        $newMember = $db->prepare('INSERT INTO admins (nickname, pass, registration_date) VALUES(?, ?, Now())');
+        $newMember = $db->prepare('INSERT INTO admins (nickname, pass, registration_date) VALUES(?, ?, CURDATE())');
         $addMember = $newMember->execute(array($nickname, $pass));
 
         return $addMember;
