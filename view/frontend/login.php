@@ -5,7 +5,7 @@
 </header>
 <section class="row">
     <!-- addMenber--> 
-    <form class="col-6 offset-3" action="login.php?action=addMember" method="post">
+    <form class="col-6 offset-3" action="/projet4/index.php?action=addMember" method="post">
         <p>Enregister vos identifiants :</p>
             <div class="form-group">
                 <input class="form-control" type="text" name="nickname" placeholder="nom d'utilisateur">
