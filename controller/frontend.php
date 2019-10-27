@@ -45,15 +45,24 @@ function addPost($title, $content){
     }
  }
 
- //addmenber
- function addMember($nickname, $pass){
-    $memberManager = new LogManager();
-    $addMember = $memberManager->createMember($nickname, $pass);
-    
-    if ($addMember === false){
-        die("Erreur d'ajout du nickname");
-    } else{
-        header("Location: index.php");
-    }
+//get listMember
+function listAdmin(){
+    $logManager = new LogManager();
+    //$postManager = new PostManager();
+    $admin = $logManager->getMember();
+   
+    require('view\frontend\login.php');
+}
+
+//addmenber
+function addMember($nickname, $pass){
+$memberManager = new LogManager();
+$addMember = $memberManager->createMember($nickname, $pass);
+
+if ($addMember === false){
+    die("Erreur d'ajout du nickname");
+} else{
+    header("Location: index.php");
+}
 }
 
