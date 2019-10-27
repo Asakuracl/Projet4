@@ -77,8 +77,8 @@ function checkLog($nickname, $pass){
     
     //addname the post will get in the view
     // think about if to check all
-    if ($addMenber === false){
-        die("Erreur d'ajout du nickname");
+    if ($addMember === false){
+        echo "Erreur d'ajout du nickname";
     } else{
         header("Location: index.php");
     }
