@@ -51,7 +51,8 @@ function addPost($title, $content){
 //addmenber
 function addMember($nickname, $pass){
 $memberManager = new LogManager();
-$addMember = $memberManager->createMember($nickname, $pass);
+$pass_hash = password_hash($pass, PASSWORD_DEFAULT);
+$addMember = $memberManager->createMember($nickname, $pass_hash);
 
 if ($addMember === false){
     die("Erreur d'ajout du nickname");
