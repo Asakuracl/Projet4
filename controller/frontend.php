@@ -50,14 +50,18 @@ function addPost($title, $content){
 
 //addmenber
 function addMember($nickname, $pass){
-$memberManager = new LogManager();
-$pass_hash = password_hash($pass, PASSWORD_DEFAULT);
-$addMember = $memberManager->createMember($nickname, $pass_hash);
+    $memberManager = new LogManager();
+    $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
+    $addMember = $memberManager->createMember($nickname, $pass_hash);
 
-if ($addMember === false){
-    die("Erreur d'ajout du nickname");
-} else{
-    header("Location: index.php");
-}
+    //ajouter un message de confirmation d'ajout
+    $success = null;
+
+    if ($addMember === true){
+        header("Location: view/frontend/login.php");
+        $success = "Membre ajouté !";     
+    } else{
+        die("Erreur ajout du membre"); 
+    }
 }
 
