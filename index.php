@@ -36,9 +36,6 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
-        
-        //getMember add router
-        
         // addMember
         elseif ($_GET['action'] == 'addMember'){
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
@@ -48,7 +45,15 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
-       
+        //login
+       elseif ($_GET['action'] == 'checkLog'){
+            if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
+                checkLog($_POST['nickname'], $_POST['pass']);
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
         
     } else { 
         listPosts(); 
