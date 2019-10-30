@@ -4,7 +4,7 @@
 
 </header>
 <section class="row">
-    <!-- addMenber--> 
+    <!-- addMember--> 
     <form class="col-6 offset-3" action="/projet4/index.php?action=addMember" method="post">
         <p>Enregister vos identifiants :</p>
             <div class="form-group">
@@ -13,7 +13,7 @@
             <div class="form-group">
                 <input class="form-control" type="password" name="pass" placeholder="mot de passe">
             </div>
-            <button type="submit" class="button-login"> Se connecter</button>
+            <button type="submit" class="button-login"> Enregistrer</button>
     </form>
 
     <!-- checklog--> 
