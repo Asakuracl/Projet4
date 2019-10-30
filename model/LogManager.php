@@ -17,11 +17,15 @@ class LogManager extends Manager{
     // login
     public function logIn($nickname){
         $db =  $this->dbConnect();
+
+        $login = $db->prepare('SELECT id, nickname, pass FROM admins WHERE nickname = :nickname');
         
-        $login = $db->prepare('SELECT id, nickname, pass, DATE_FORMAT( registration_date, \'%d/%m/%Y à %Hh%imin\') AS registration_date_fr FROM admins WHERE nickname= :nickname');
-        $checkLog = $login->execute(array(
+        $login->execute(array(
             'nickname' => $nickname));
+        $checkLog = $login->fetch();
+
         return $checkLog;
+
     }
 
 }
