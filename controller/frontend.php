@@ -45,16 +45,13 @@ function addPost($title, $content){
     }
  }
 
-//get listMember
-
-
 //addmenber
 function addMember($nickname, $pass){
     $memberManager = new LogManager();
     $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
     $addMember = $memberManager->createMember($nickname, $pass_hash);
 
-    //ajouter un message de confirmation d'ajout
+    //trying have a succes message, if add ok
     $success = null;
 
     if ($addMember === true){
@@ -64,4 +61,27 @@ function addMember($nickname, $pass){
         die("Erreur ajout du membre"); 
     }
 }
+
+//get member
+function checkLog($nickname){
+    $logManager = new LogManager();
+    $check = $logManager->logIn($nickname);
+    
+    $checkPass = password_verify($_POST['pass'], $check['pass']);
+   
+    if (!$check){
+        echo "identifiant ou mot de passe incorrect";
+    } else {
+        if($checkPass){
+            session_start();
+            $_SESSION['id'] = $check['id'];
+            $_SESSION['nickname'] = $check['nickname'];
+            
+            header('Location: index.php');
+        } else {
+            echo "identifiant ou mot de passe incorrect";
+        }
+    }
+ }
+
 
