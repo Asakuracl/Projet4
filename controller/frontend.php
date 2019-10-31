@@ -68,14 +68,14 @@ function checkLog($nickname){
     $check = $logManager->logIn($nickname);
     
     $checkPass = password_verify($_POST['pass'], $check['pass']);
-   
+
     if (!$check){
         echo "identifiant ou mot de passe incorrect";
     } else {
         if($checkPass){
             session_start();
             $_SESSION['id'] = $check['id'];
-            $_SESSION['nickname'] = $check['nickname'];
+            $_SESSION['nickname'] = $nickname;
             
             header('Location: index.php');
         } else {
