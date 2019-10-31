@@ -18,10 +18,9 @@ class LogManager extends Manager{
     public function logIn($nickname){
         $db =  $this->dbConnect();
 
-        $login = $db->prepare('SELECT id, nickname, pass FROM admins WHERE nickname = :nickname');
+        $login = $db->prepare('SELECT id, nickname, pass FROM admins WHERE nickname = ?');
         
-        $login->execute(array(
-            'nickname' => $nickname));
+        $login->execute(array($nickname));
         $checkLog = $login->fetch();
 
         return $checkLog;
