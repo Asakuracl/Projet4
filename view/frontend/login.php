@@ -5,6 +5,8 @@
 </header>
 <section class="row">
     <!-- addMember--> 
+
+    <!-- 
     <form class="col-6 offset-3" action="/projet4/index.php?action=addMember" method="post">
         <p>Enregister vos identifiants :</p>
             <div class="form-group">
@@ -15,6 +17,7 @@
             </div>
             <button type="submit" class="button-login"> Enregistrer</button>
     </form>
+    -->
 
     <!-- checklog--> 
     <form class="col-6 offset-3" action="/projet4/index.php?action=checkLog" method="post">
