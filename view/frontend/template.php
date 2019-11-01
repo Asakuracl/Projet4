@@ -31,7 +31,17 @@
                 <a class="nav-link" href="/projet4/index.php?action=post&id=1">Chapitre</a>
             </li>
             <li>
-                <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
+                <?php
+                    if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
+                ?>
+                    <a class="nav-link" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
+                <?php
+                    } else {
+                ?>
+                    <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
+                <?php
+                    } 
+                ?>
             </li>              
         </ul>
     </div>
