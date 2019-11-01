@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
