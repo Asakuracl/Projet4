@@ -73,7 +73,6 @@ function checkLog($nickname){
         echo "identifiant ou mot de passe incorrect";
     } else {
         if($checkPass){
-            session_start();
             $_SESSION['id'] = $check['id'];
             $_SESSION['nickname'] = $nickname;
             
