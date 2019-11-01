@@ -76,7 +76,7 @@ function checkLog($nickname){
             $_SESSION['id'] = $check['id'];
             $_SESSION['nickname'] = $nickname;
             
-            header('Location: index.php');
+            header('Location: /projet4/view/backend/adminView.php');
         } else {
             echo "identifiant ou mot de passe incorrect";
         }
