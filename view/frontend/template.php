@@ -16,6 +16,15 @@
         <p class="col">Short Story</p>
         <ul class="nav">
             <li>
+                <a class="nav-link">
+                    <?php
+                        if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
+                            echo "Bonjour ". $_SESSION['nickname'];
+                        }
+                    ?>
+                </a>
+            </li> 
+            <li>
                 <a class="nav-link" href="/projet4/index.php">Accueil</a>
             </li>
             <li>
@@ -23,7 +32,7 @@
             </li>
             <li>
                 <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
-            </li>
+            </li>              
         </ul>
     </div>
 
