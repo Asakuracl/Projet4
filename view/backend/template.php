@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title><?= $title ?></title>
 </head>
-<body class="main-body">
-    <div class="container">
-
+<body class="main-body container">
 <header>
     <div class="row">
         <p class="col">Admin</p>
@@ -44,7 +42,7 @@
     </div>
 
 <?= $content ?>
-</div>
+
 <!-- script -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
