@@ -26,6 +26,9 @@
                 <a class="nav-link" href="/projet4/index.php">Accueil</a>
             </li>
             <li>
+                <a class="nav-link" href="/projet4/view/backend/adminView.php">Accueil Administration</a>
+            </li>
+            <li>
                 <?php
                     if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
                 ?>
