@@ -1,5 +1,6 @@
 <?php
-session_start();
+//session_start();
+//var_dump(session_start());
 
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
@@ -63,20 +64,20 @@ function addMember($nickname, $pass){
 }
 
 //get member
-function checkLog($nickname){
+function checkLogin($nickname, $pass){
     $logManager = new LogManager();
-    $check = $logManager->logIn($nickname);
-    
+    $check = $logManager->logIn($nickname, $pass);
     $checkPass = password_verify($_POST['pass'], $check['pass']);
 
     if (!$check){
         echo "identifiant ou mot de passe incorrect";
     } else {
         if($checkPass){
+            session_start();
             $_SESSION['id'] = $check['id'];
-            $_SESSION['nickname'] = $nickname;
+            $_SESSION['nickname'] = $check['nickname'];
             
-            require_once('view/backend/adminView.php');
+            //require("view/backend/adminView.php");
         } else {
             echo "identifiant ou mot de passe incorrect";
         }
