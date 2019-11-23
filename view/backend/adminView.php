@@ -2,7 +2,7 @@
 
 <?php ob_start(); 
 
-if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
+if (isset($_SESSION)){
 
 ?>
 
