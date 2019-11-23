@@ -47,18 +47,23 @@ try{
             }
         }
         //login
-       elseif ($_GET['action'] == 'checkLog'){
-            if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
-                checkLog($_POST['nickname'], $_POST['pass']);
-            }
-            else {
-            throw new Exception("Erreur : merci de renseigner tous les champs");
-            }
+       elseif ($_GET['action'] == 'checkLogin'){
+            if(!isset($_SESSION)){
+                if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
+                checkLogin($_POST['nickname'], $_POST['pass']);
+                require("view/backend/adminView.php");
+                }
+                else {
+                throw new Exception("Erreur : merci de renseigner tous les champs");
+                }
+            } 
         }
-        
+
     } else { 
         listPosts(); 
     }
+
+  var_dump(session_status());
 }
 catch(Exception $e){
     echo 'Erreur : ' .$e ->getMessage();
