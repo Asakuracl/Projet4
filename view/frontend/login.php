@@ -20,7 +20,7 @@
     -->
 
     <!-- checklog--> 
-    <form class="col-6 offset-3" action="/projet4/index.php?action=checkLog" method="post">
+    <form class="col-6 offset-3" action="/projet4/index.php?action=checkLogin" method="post">
         <p>Formulaire de connexion :</p>
             <div class="form-group">
                 <input class="form-control" type="text" name="nickname" placeholder="nom d'utilisateur">
