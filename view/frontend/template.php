@@ -31,7 +31,7 @@
                 if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
             ?>
             <li>
-                <a class="nav-link" href="/projet4/view/backend/adminView.php">Accueil Administration</a>
+                <a class="nav-link" href="/projet4/index.php?action=checkLog">Accueil Administration</a>
             </li>
             <?php
             }
