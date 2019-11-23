@@ -1,7 +1,13 @@
 <?php $title = "Administration"; ?>
 
-<?php ob_start(); ?>
-
+<?php ob_start(); 
+/* test 
+session_start();
+if (isset($_SESSION)){
+header ('Location: /projet4/view/backend/adminView.php');
+} else {
+*/
+?>
 </header>
 <section class="row">
     <!-- addMember--> 
@@ -31,6 +37,11 @@
             <button type="submit" class="button-login"> Se connecter</button>
     </form>
 </section>
+
+<?php
+//}
+?>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require("template.php"); ?>
