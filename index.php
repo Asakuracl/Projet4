@@ -63,7 +63,14 @@ try{
         listPosts(); 
     }
 
-  var_dump(session_status());
+    // test zone
+    /*
+    session_start();
+    if(!empty($_SESSION)){
+        var_dump('lol');
+        //header("Location: index.php");
+    }
+    */
 }
 catch(Exception $e){
     echo 'Erreur : ' .$e ->getMessage();
