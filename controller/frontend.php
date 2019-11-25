@@ -47,6 +47,7 @@ function addPost($title, $content){
  }
 
 //addmenber
+/*
 function addMember($nickname, $pass){
     $memberManager = new LogManager();
     $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
@@ -62,6 +63,7 @@ function addMember($nickname, $pass){
         die("Erreur ajout du membre"); 
     }
 }
+*/
 
 //get member
 function checkLogin($nickname, $pass){
