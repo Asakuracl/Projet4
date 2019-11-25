@@ -15,7 +15,7 @@ if (isset($_SESSION)){
 <ul class="nav justify-content-center">
     <li class="nav-item">
         <h3>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/projet4/view/backend/CreatPost.php">
                 Creer un chapitre
             </a>
         </h3>
