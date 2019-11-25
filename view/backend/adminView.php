@@ -34,20 +34,6 @@ if (isset($_SESSION)){
             </a>
         </h3>
     </li>
-        
-<!--
-    <a  href="#">
-        <h3>
-            mise à jour de billets
-        </h3>
-    </a>
-
-    <a href="#">
-        <h3>
-            suppression de billets
-        </h3>
-    </a>
--->
 </ul>
 
 
