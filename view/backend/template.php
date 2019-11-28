@@ -16,7 +16,7 @@
             <li>
                 <a class="nav-link">
                     <?php
-                        if (isset($_SESSION)){
+                        if (isset($_SESSION['nickname'])){
                             echo "Bonjour ". $_SESSION['nickname'];
                         }
                     ?>
