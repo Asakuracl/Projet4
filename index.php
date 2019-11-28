@@ -54,7 +54,7 @@ try{
             require("view/backend/adminView.php");
             }
             else {
-            throw new Exception("Erreur : merci de renseigner tous les champs");
+            throw new Exception("merci de renseigner tous les champs");
             }
         }
 
