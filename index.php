@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('controller\frontend.php');
 require('controller\backend.php');
 
@@ -48,29 +49,19 @@ try{
         }
         //login
        elseif ($_GET['action'] == 'checkLogin'){
-            if(!isset($_SESSION)){
-                if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
-                checkLogin($_POST['nickname'], $_POST['pass']);
-                require("view/backend/adminView.php");
-                }
-                else {
-                throw new Exception("Erreur : merci de renseigner tous les champs");
-                }
-            } 
+            if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
+            checkLogin($_POST['nickname'], $_POST['pass']);
+            require("view/backend/adminView.php");
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
         }
 
     } else { 
-        listPosts(); 
+        listPosts();
     }
 
-    // test zone
-    /*
-    session_start();
-    if(!empty($_SESSION)){
-        var_dump('lol');
-        //header("Location: index.php");
-    }
-    */
 }
 catch(Exception $e){
     echo 'Erreur : ' .$e ->getMessage();
