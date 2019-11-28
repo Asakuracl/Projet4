@@ -18,7 +18,7 @@
             <li>
                 <a class="nav-link">
                     <?php
-                        if (isset($_SESSION)){
+                        if (isset($_SESSION['nickname'])){
                             echo "Bonjour ". $_SESSION['nickname'];
                         }
                     ?>
@@ -28,10 +28,10 @@
                 <a class="nav-link" href="/projet4/index.php">Accueil</a>
             </li>
             <?php
-                if (isset($_SESSION)){
+                if (isset($_SESSION['nickname'])){
             ?>
             <li>
-                <a class="nav-link" href="/projet4/index.php?action=checkLogin">Accueil Administration</a>
+                <a class="nav-link" href="view/backend/adminView.php">Accueil Administration</a>                
             </li>
             <?php
             }
