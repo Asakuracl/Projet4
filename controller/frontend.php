@@ -69,21 +69,33 @@ function addMember($nickname, $pass){
 function checkLogin($nickname, $pass){
     $logManager = new LogManager();
     $check = $logManager->logIn($nickname, $pass);
+
     $checkPass = password_verify($_POST['pass'], $check['pass']);
 
     if (!$check){
-        echo "identifiant ou mot de passe incorrect";
+         die("identifiant ou mot de passe incorrect");
     } else {
         if($checkPass){
-            session_start();
             $_SESSION['id'] = $check['id'];
             $_SESSION['nickname'] = $check['nickname'];
-            
-            //require("view/backend/adminView.php");
         } else {
-            echo "identifiant ou mot de passe incorrect";
+            die("identifiant ou mot de passe incorrect");
         }
     }
  }
 
+ /*
+ function checkLogin($nickname, $pass){
+    $logManager = new LogManager();
+    $check = $logManager->logIn($nickname, $pass);
+    $checkPass = password_verify($_POST['pass'], $check['pass']);
+
+    if (!$checkPass){
+        echo "identifiant ou mot de passe incorrect";
+    } else {
+        $_SESSION['id'] = $check['id'];
+        $_SESSION['nickname'] = $check['nickname'];
+    }
+ }
+ */
 
