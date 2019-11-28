@@ -18,12 +18,12 @@ class LogManager extends Manager{
     public function logIn($nickname, $pass){
         $db =  $this->dbConnect();
 
-        $login = $db->prepare('SELECT id, nickname, pass FROM admins WHERE nickname = ?');
+        $login = $db->prepare('SELECT id, pass FROM admins WHERE nickname = ?');
         
         $login->execute(array($nickname));
-        $checkLog = $login->fetch();
+        $checkLogin = $login->fetch();
 
-        return $checkLog;
+        return $checkLogin;
 
     }
 
