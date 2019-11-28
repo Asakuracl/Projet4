@@ -1,13 +1,6 @@
 <?php $title = "Administration"; ?>
 
-<?php ob_start(); 
-/* test 
-session_start();
-if (isset($_SESSION)){
-header ('Location: /projet4/view/backend/adminView.php');
-} else {
-*/
-?>
+<?php ob_start(); ?>
 </header>
 <section class="row">
     <!-- addMember--> 
@@ -25,7 +18,16 @@ header ('Location: /projet4/view/backend/adminView.php');
     </form>
     -->
 
-    <!-- checklog--> 
+    <!-- checklogin--> 
+
+    <!-- work on it
+    <?php if(!isset($_SESSION)) { ?>
+        <div class="alert alert-danger" role="alert">
+            <?= 'lol' ?>
+        </div>
+    <?php } ?>
+    -->
+
     <form class="col-6 offset-3" action="/projet4/index.php?action=checkLogin" method="post">
         <p>Formulaire de connexion :</p>
             <div class="form-group">
@@ -37,10 +39,6 @@ header ('Location: /projet4/view/backend/adminView.php');
             <button type="submit" class="button-login"> Se connecter</button>
     </form>
 </section>
-
-<?php
-//}
-?>
 
 <?php $content = ob_get_clean(); ?>
 
