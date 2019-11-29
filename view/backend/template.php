@@ -26,7 +26,7 @@
                 <a class="nav-link" href="/projet4/index.php">Accueil</a>
             </li>
             <li>
-                <a class="nav-link" href="/projet4/index.php?action=checkLogin">Accueil Administration</a>
+                <a class="nav-link" href="/projet4/index.php?action=adminPage">Accueil Administration</a>
             </li>
             <li>
                 <a class="nav-link" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
