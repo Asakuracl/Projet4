@@ -47,7 +47,11 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
-        //login
+        //loginPage
+        elseif ($_GET['action'] == 'loginPage'){
+            loginPage();
+        }
+        //checklogin
        elseif ($_GET['action'] == 'checkLogin'){
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
             checkLogin($_POST['nickname'], $_POST['pass']);
@@ -57,7 +61,6 @@ try{
             throw new Exception("merci de renseigner tous les champs");
             }
         }
-
     } else { 
         listPosts();
     }
