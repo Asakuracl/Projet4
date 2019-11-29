@@ -19,3 +19,15 @@ function addMember($nickname, $pass){
         die("Erreur ajout du membre"); 
     }
 }
+
+// addpost
+function addPost($title, $content){
+    $postManager = new PostManager();
+    $addPost = $postManager->newPost($title, $content);
+
+    if ($addPost === false){
+        die("Erreur d'ajout du billet");
+    } else{
+        header("Location: index.php");
+    }
+}
