@@ -34,68 +34,20 @@ function addComment($postId, $author, $comment){
     }
 }
 
-// pour ajouter un post
-function addPost($title, $content){
-    $postManager = new PostManager();
-    $addPost = $postManager->newPost($title, $content);
-
-    if ($addPost === false){
-        die("Erreur d'ajout du billet");
-    } else{
-        header("Location: index.php");
-    }
- }
-
-//addmenber
-/*
-function addMember($nickname, $pass){
-    $memberManager = new LogManager();
-    $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
-    $addMember = $memberManager->createMember($nickname, $pass_hash);
-
-    //trying have a succes message, if add ok
-    $success = null;
-
-    if ($addMember === true){
-        header("Location: view/frontend/login.php");
-        $success = "Membre ajouté !";     
-    } else{
-        die("Erreur ajout du membre"); 
-    }
-}
-*/
-
 //verify member
 function checkLogin($nickname, $pass){
     $logManager = new LogManager();
     $check = $logManager->logIn($nickname, $pass);
-
     $checkPass = password_verify($_POST['pass'], $check['pass']);
 
     if (!$check){
-         die("identifiant ou mot de passe incorrect");
-    } else {
-        if($checkPass){
-            $_SESSION['id'] = $check['id'];
-            $_SESSION['nickname'] = $check['nickname'];
-        } else {
-            die("identifiant ou mot de passe incorrect");
-        }
-    }
- }
-
- /*
- function checkLogin($nickname, $pass){
-    $logManager = new LogManager();
-    $check = $logManager->logIn($nickname, $pass);
-    $checkPass = password_verify($_POST['pass'], $check['pass']);
-
-    if (!$checkPass){
-        echo "identifiant ou mot de passe incorrect";
-    } else {
+        die("identifiant ou mot de passe incorrect");
+    } 
+    elseif ($checkPass) {
         $_SESSION['id'] = $check['id'];
         $_SESSION['nickname'] = $check['nickname'];
+    } else {
+        die("identifiant ou mot de passe incorrect");
     }
- }
- */
+}
 
