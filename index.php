@@ -49,7 +49,7 @@ try{
         }
         //loginPage
         elseif ($_GET['action'] == 'loginPage'){
-            loginPage();
+             require('view\frontend\login.php');
         }
         //checklogin
        elseif ($_GET['action'] == 'checkLogin'){
@@ -61,6 +61,11 @@ try{
             throw new Exception("merci de renseigner tous les champs");
             }
         }
+        //adminPage
+        elseif ($_GET['action'] == 'adminPage'){
+            require("view/backend/adminView.php");
+        }
+        
     } else { 
         listPosts();
     }
