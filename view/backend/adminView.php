@@ -1,7 +1,7 @@
 <?php $title = "View administration"; ?>
 
 <?php ob_start(); 
-session_start();
+
 if (isset($_SESSION['nickname'])){
 
 ?>
