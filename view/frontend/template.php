@@ -47,7 +47,7 @@
                 <?php
                     } else {
                 ?>
-                    <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
+                    <a class="nav-link" href="/projet4/index.php?action=loginPage">Se connecter</a>
                 <?php
                     } 
                 ?>
