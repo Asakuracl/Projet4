@@ -65,11 +65,6 @@ function addMember($nickname, $pass){
 }
 */
 
-//aces to loginPage
-function loginPage(){    
-    require('view\frontend\login.php');
-}
-
 //verify member
 function checkLogin($nickname, $pass){
     $logManager = new LogManager();
