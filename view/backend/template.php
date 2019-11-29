@@ -29,17 +29,7 @@
                 <a class="nav-link" href="/projet4/index.php?action=checkLogin">Accueil Administration</a>
             </li>
             <li>
-                <?php
-                    if (isset($_SESSION)){
-                ?>
-                    <a class="nav-link" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
-                <?php
-                    } else {
-                ?>
-                    <a class="nav-link" href="/projet4/view/frontend/login.php">Se connecter</a>
-                <?php
-                    } 
-                ?>
+                <a class="nav-link" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
             </li>              
         </ul>
     </div>
