@@ -29,15 +29,6 @@ try{
             throw new Exception("Erreur : aucun identifiant de billet envoyé");
             }
         }
-        // addPost
-        elseif ($_GET['action'] == 'addPost'){
-            if(!empty($_POST['title']) && !empty($_POST['content'])){
-                addPost($_POST['title'], $_POST['content']);
-            }
-            else {
-            throw new Exception("Erreur : merci de renseigner tous les champs");
-            }
-        }
         // addMember
         elseif ($_GET['action'] == 'addMember'){
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
@@ -61,10 +52,28 @@ try{
             throw new Exception("merci de renseigner tous les champs");
             }
         }
+
+        //ADMIN//
+
         //adminPage
         elseif ($_GET['action'] == 'adminPage'){
             require("view/backend/adminView.php");
         }
+
+        // addPost
+        elseif ($_GET['action'] == 'createPost'){
+            require("view/backend/CreatePost.php");
+        }
+
+        elseif ($_GET['action'] == 'addPost'){
+            if(!empty($_POST['title']) && !empty($_POST['content'])){
+                addPost($_POST['title'], $_POST['content']);
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
+
         
     } else { 
         listPosts();
