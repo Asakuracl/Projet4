@@ -43,4 +43,13 @@ class PostManager extends Manager{
 
         return $deletePost;
     }
+
+    public function upgradePost($id, $title, $content){
+        $db = $this->dbConnect();
+
+        $upgrade = $db->prepare('UPDATE posts SET title=?, content=? WHERE id=?');
+        $updatePost = $upgrade->execute(array($id, $title, $content));
+
+        return $updatePost;
+    }
 }
