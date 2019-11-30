@@ -40,13 +40,13 @@ function postInBackend(){
 }
 
 // deletepost
-function deletePost($postID){
+function deletePost($postId){
     $postManager = new PostManager();
-    $deletePost = $postManager->removePost($postID);
+    $deletePost = $postManager->removePost($postId);
 
     if ($deletePost === false){
         die("Erreur de suppréssion du billet");
     } else{
-        header("Location: index.php");
+        header("Location: index.php?action=erasePost");
     }
 }
