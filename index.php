@@ -73,6 +73,19 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
+        // postInBackend
+        elseif ($_GET['action'] == 'erasePost'){
+            postInBackend();
+        }
+        // deletePost
+        elseif ($_GET['action'] == 'deletePost'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                deletePost();
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
 
         
     } else { 
