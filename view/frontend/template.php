@@ -37,9 +37,6 @@
             }
             ?>
             <li>
-                <a class="nav-link" href="/projet4/index.php?action=post&id=1">Chapitre</a>
-            </li>
-            <li>
                 <?php
                     if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
                 ?>
