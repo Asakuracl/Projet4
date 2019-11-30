@@ -35,7 +35,7 @@ class PostManager extends Manager{
         return $addPost;
     }
     
-    public function removePost($postID){
+    public function removePost($postId){
         $db = $this->dbConnect();
 
         $remove = $db->prepare('DELETE FROM posts WHERE id=?');
