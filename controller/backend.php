@@ -31,3 +31,22 @@ function addPost($title, $content){
         header("Location: index.php");
     }
 }
+//test
+function postInBackend(){
+    $postManager = new PostManager();
+    $posts = $postManager->getPosts();
+   
+    require('view\backend\deletePost.php');
+}
+
+// deletepost
+function deletePost($postID){
+    $postManager = new PostManager();
+    $deletePost = $postManager->removePost($postID);
+
+    if ($deletePost === false){
+        die("Erreur de suppréssion du billet");
+    } else{
+        header("Location: index.php");
+    }
+}
