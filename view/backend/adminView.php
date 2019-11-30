@@ -29,7 +29,7 @@ if (isset($_SESSION['nickname'])){
     </li>
     <li class="nav-item">
         <h3>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index.php?action=erasePost">
                 suppression de billets
             </a>
         </h3>
