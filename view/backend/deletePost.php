@@ -26,8 +26,13 @@ if (isset($_SESSION['nickname'])){
                 </p>
             </div>
             <div>
+                <a href="index.php?action=updatePost&amp;id=<?php echo $dataPosts['id']; ?>">
+                Modifier
+                </a>
+            </div>
+            <div>
                 <a class="text-danger" href="index.php?action=deletePost&amp;id=<?php echo $dataPosts['id']; ?>"onclick="return confirm('attention suppression définitive !')">
-                    supprimer ?
+                    Supprimer ?
                 </a>
             </div>
         </div>
