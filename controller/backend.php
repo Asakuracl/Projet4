@@ -31,12 +31,13 @@ function addPost($title, $content){
         header("Location: index.php");
     }
 }
-//test
+
+//postInBackend
 function postInBackend(){
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
    
-    require('view\backend\deletePost.php');
+    require('view\backend\managePost.php');
 }
 
 // deletepost
