@@ -21,16 +21,11 @@ if (isset($_SESSION['nickname'])){
         </h3>
     </li>
     <li class="nav-item">
-        <h3>
-            <a class="nav-link" href="#">
-                mise à jour de billets
-            </a>
-        </h3>
     </li>
     <li class="nav-item">
         <h3>
             <a class="nav-link" href="index.php?action=erasePost">
-                suppression de billets
+                administrer les billets
             </a>
         </h3>
     </li>
