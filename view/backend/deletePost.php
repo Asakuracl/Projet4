@@ -12,12 +12,21 @@
     while($dataPosts= $posts->fetch())
     {
     ?>
-    <h3>
-        <?= htmlspecialchars($dataPosts['title']); ?>
-    </h3>
-    <p>
-        <br>le <?= $dataPosts['creation_date_fr']; ?>
-    </p>
+        <div class="col-lg-4 rounded border">
+            <div>
+                <h3>
+                    <?= htmlspecialchars($dataPosts['title']); ?>
+                </h3>
+                <p>
+                    <br>le <?= $dataPosts['creation_date_fr']; ?>
+                </p>
+            </div>
+            <div>
+                <a href="index.php?action=deletePost&amp;id=<?php echo $dataPosts['id']; ?>">
+                supprimer
+                </a>
+            </div>
+        </div>
     <?php
     }
     $posts->closeCursor();
