@@ -50,3 +50,15 @@ function deletePost($postId){
         header("Location: index.php?action=erasePost");
     }
 }
+
+// updatepost
+function updatePost($id, $title, $content){
+    $postManager = new PostManager();
+    $updatePost = $postManager->upgradePost($id, $title, $content);
+
+    if ($updatePost === false){
+        die("Erreur de mise à jour du billet");
+    } else{
+        header("Location: index.php?action=upgradePost");
+    }
+}
