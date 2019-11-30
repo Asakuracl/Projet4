@@ -80,7 +80,7 @@ try{
         // deletePost
         elseif ($_GET['action'] == 'deletePost'){
             if (isset($_GET['id']) && $_GET['id'] > 0){
-                deletePost();
+                deletePost($_GET['id']);
             }
             else {
             throw new Exception("Erreur : merci de renseigner tous les champs");
