@@ -1,6 +1,10 @@
 <?php $title = "View administration"; ?>
 
-<?php ob_start(); ?>
+<?php ob_start(); 
+
+if (isset($_SESSION['nickname'])){
+
+?>
 
     <div class="row">
         <h1 class="col-6 offset-4">Supprimer un chapitre</h1>
@@ -32,6 +36,10 @@
     $posts->closeCursor();
     ?>
 </section>
+
+<?php
+}
+?>
 
 <?php $content = ob_get_clean() ?>
 
