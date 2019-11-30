@@ -7,7 +7,7 @@ if (isset($_SESSION['nickname'])){
 ?>
 
     <div class="row">
-        <h1 class="col-6 offset-4">Supprimer un chapitre</h1>
+        <h1 class="col-6 offset-4">Administrer les chapitres</h1>
     </div>
 </header>
 
