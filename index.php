@@ -86,6 +86,15 @@ try{
             throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
+        // updatePost
+        elseif ($_GET['action'] == 'updatePost'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                updatePost($_GET['id'], $_POST['title'], $_POST['content']);
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
 
         
     } else { 
