@@ -7,20 +7,18 @@ if (isset($_SESSION['nickname'])){
 ?>
 
     <div class="row">
-        <h1 class="col-6 offset-4">Selectionner votre action</h1>
+        <h1 class="offset-3 col-6">Selectionner votre action</h1>
     </div>
 </header>
 
 
-<ul class="nav justify-content-center">
+<ul class="nav">
     <li class="nav-item">
         <h3>
             <a class="nav-link" href="index.php?action=createPost">
                 Creer un chapitre
             </a>
         </h3>
-    </li>
-    <li class="nav-item">
     </li>
     <li class="nav-item">
         <h3>
