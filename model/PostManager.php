@@ -48,7 +48,7 @@ class PostManager extends Manager{
         $db = $this->dbConnect();
 
         $upgrade = $db->prepare('UPDATE posts SET title=?, content=? WHERE id=?');
-        $updatePost = $upgrade->execute(array($id, $title, $content));
+        $updatePost = $upgrade->execute(array($title, $content, $id));
 
         return $updatePost;
     }
