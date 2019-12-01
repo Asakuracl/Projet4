@@ -26,7 +26,7 @@ if (isset($_SESSION['nickname'])){
                 </p>
             </div>
             <div>
-                <a href="index.php?action=updatePost&amp;id=<?php echo $dataPosts['id']; ?>">
+                <a href="index.php?action=updatePostView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modifier
                 </a>
             </div>
