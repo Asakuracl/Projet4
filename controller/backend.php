@@ -52,6 +52,14 @@ function deletePost($postId){
     }
 }
 
+//editPostView
+function editPostView(){
+    $postManager = new PostManager();
+    $post = $postManager->getPost($_GET['id']);
+
+    require('view\backend\updatePostView.php');
+}
+
 // updatepost
 function updatePost($id, $title, $content){
     $postManager = new PostManager();
@@ -60,6 +68,6 @@ function updatePost($id, $title, $content){
     if ($updatePost === false){
         die("Erreur de mise à jour du billet");
     } else{
-        header("Location: index.php?action=upgradePost");
+        header("Location: index.php?action=erasePost");
     }
 }
