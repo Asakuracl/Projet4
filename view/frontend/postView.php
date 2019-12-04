@@ -52,6 +52,9 @@
             <p>
                 <?= nl2br(htmlspecialchars($comment['comment'])); ?>
             </p>
+            <div>
+                <button type="button">Signaler</button>
+            </div>
         <?php
         }
         ?>
