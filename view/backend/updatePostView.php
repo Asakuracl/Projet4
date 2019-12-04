@@ -16,11 +16,11 @@ if (isset($_SESSION['nickname'])){
     <form action="index.php?action=updatePost&amp;id=<?php echo $post['id']; ?>" method="post">
         <div>
             <label for="title">Titre</label><br>
-            <input type="text" id="title" name="title" />
+            <input type="text" id="title" name="title" value="<?php echo $post['title']; ?>"/>
         </div>
         <div>
             <label for="content">Contenu</label><br>
-            <textarea id="content" name="content"></textarea>
+            <textarea id="content" name="content"><?php echo $post['content']; ?></textarea>
         </div>
         <div>
             <input type="submit" />
