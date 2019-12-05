@@ -71,3 +71,22 @@ function updatePost($id, $title, $content){
         header("Location: index.php?action=erasePost");
     }
 }
+
+//moderateCommentView
+function moderateCommentView(){
+    $commentManager = new CommentManager();
+    $comments = $commentManager->getComments($_GET['id']);
+
+    require('view\backend\moderateCommentView.php');
+}
+// moderateComment
+function moderateComment($postId, $author, $comment){
+    $commentManager = new CommentManager();
+    $moderateComment = $commentManager->modifyComment($postId, $author, $comment);
+
+    if ($moderateComment === false){
+        die("Erreur de mise à jour du billet");
+    } else{
+        header("Location: index.php?action=erasePost");
+    }
+}
