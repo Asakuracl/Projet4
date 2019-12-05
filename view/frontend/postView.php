@@ -50,7 +50,7 @@
                 <span class="text-success">
                     <?= htmlspecialchars($comment['author']); ?>
                 </span>
-                <button type="button" id="alarm">
+                <button type="button" id="alarm" class="btn btn-outline-danger">
                     <i class="fas fa-bullhorn"></i>
                 </button>
             </p>
