@@ -20,4 +20,13 @@ class CommentManager  extends Manager{
         return $addComment;
     }
 
+    public function modifyComment($postId, $author, $comment){
+        $db = $this->dbConnect();
+
+        $modify = $db->prepare('UPDATE comments SET author=?, comment=? WHERE post_id=?');
+        $moderateComment = $modify->execute(array($author, $comment, $postId));
+
+        return $moderateComment;
+    }
+
 }
