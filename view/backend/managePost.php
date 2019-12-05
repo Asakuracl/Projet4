@@ -27,7 +27,12 @@ if (isset($_SESSION['nickname'])){
             </div>
             <div>
                 <a class="text-info" href="index.php?action=updatePostView&amp;id=<?php echo $dataPosts['id']; ?>">
-                Modifier
+                Modifier chapitre
+                </a>
+            </div>
+            <div>
+                <a class="text-info" href="index.php?action=moderateComment&amp;id=<?php echo $dataPosts['id']; ?>">
+                Modérer commentaire
                 </a>
             </div>
             <div>
