@@ -101,7 +101,21 @@ try{
             throw new Exception("Erreur : pas de id !");
             }
         }
-
+        //moderateCommentView
+        elseif ($_GET['action'] == 'moderateCommentView'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                moderateCommentView();
+            }
+        }
+        //moderateComment
+        elseif ($_GET['action'] == 'moderateComment'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                moderateComment($_GET['id'], $_POST['author'], $_POST['comment']);
+            }
+            else {
+            throw new Exception("Erreur : pas de id !");
+            }
+        }
         
     } else { 
         listPosts();
