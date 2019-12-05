@@ -37,15 +37,13 @@
         <p class="col-6 offset-3"><a href="index.php">Retour à la liste des chapitres</a>
         </p>
 </section>
-<section class="row comment">
+<section class="row">
     <div class="col-6 offset-3">
         <?php
         while($comment = $comments->fetch())
         {
         ?>
-            <!--<section class="row comment">
-                <div class="col-6 offset-3">-->
-            <p>
+            <p class="header-comment">
                 <span class="text-secondary">
                     <i class="fas fa-circle"></i> le <?= $comment['comment_date_fr'].' par '; ?>
                 </span>
@@ -56,7 +54,7 @@
                     <i class="fas fa-bullhorn"></i>
                 </button>
             </p>
-            <p>
+            <p class="content-comment">
                 <?= nl2br(htmlspecialchars($comment['comment'])); ?>
             </p>
         <?php
