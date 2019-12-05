@@ -48,13 +48,13 @@
             <p>
                 <?= htmlspecialchars($comment['author'].':'); ?>
                 le <?= $comment['comment_date_fr']; ?>
+                <button type="button">
+                    <i class="fas fa-bullhorn"></i>
+                </button>
             </p>
             <p>
                 <?= nl2br(htmlspecialchars($comment['comment'])); ?>
             </p>
-            <div>
-                <button type="button">Signaler</button>
-            </div>
         <?php
         }
         ?>
