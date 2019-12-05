@@ -46,9 +46,13 @@
             <!--<section class="row comment">
                 <div class="col-6 offset-3">-->
             <p>
-                <?= htmlspecialchars($comment['author'].':'); ?>
-                le <?= $comment['comment_date_fr']; ?>
-                <button type="button">
+                <span class="text-secondary">
+                    <i class="fas fa-circle"></i> le <?= $comment['comment_date_fr'].' par '; ?>
+                </span>
+                <span class="text-success">
+                    <?= htmlspecialchars($comment['author']); ?>
+                </span>
+                <button type="button" id="alarm">
                     <i class="fas fa-bullhorn"></i>
                 </button>
             </p>
