@@ -31,7 +31,7 @@ if (isset($_SESSION['nickname'])){
                 </a>
             </div>
             <div>
-                <a class="text-info" href="index.php?action=moderateComment&amp;id=<?php echo $dataPosts['id']; ?>">
+                <a class="text-info" href="index.php?action=moderateCommentView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modérer commentaire
                 </a>
             </div>
