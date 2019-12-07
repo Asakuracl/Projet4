@@ -29,4 +29,12 @@ class CommentManager  extends Manager{
         return $moderateComment;
     }
 
+    public function signalComment($warning){
+        $db = $this->dbConnect();
+
+        $signal = $db->prepare('UPDATE comments SET warning=warning+1 WHERE id=?');
+        $warningComment = $signal->execute(array($warning));
+
+        return $warningComment;
+    }
 }
