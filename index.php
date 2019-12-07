@@ -116,6 +116,15 @@ try{
             throw new Exception("Erreur : pas de id !");
             }
         }
+        //warningComment
+        elseif ($_GET['action'] == 'warningComment'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                warningComment($_GET['id']);
+            }
+            else {
+            throw new Exception("Erreur : pas de id !");
+            }
+        }
         
     } else { 
         listPosts();
