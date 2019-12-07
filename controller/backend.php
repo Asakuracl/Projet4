@@ -90,3 +90,14 @@ function moderateComment($postId, $author, $comment){
         header("Location: index.php?action=erasePost");
     }
 }
+//warningComment
+function warningComment($warning) {
+    $commentManager = new CommentManager();
+    $warningComment = $commentManager->signalComment($warning);
+
+    if ($warningComment === false){
+        die("Erreur de mise à jour du billet");
+    } else{
+        header("Location: index.php");
+    }
+}
