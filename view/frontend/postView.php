@@ -50,9 +50,11 @@
                 <span class="text-success">
                     <?= htmlspecialchars($comment['author']); ?>
                 </span>
-                <button type="button" id="alarm" class="btn btn-outline-danger">
-                    <i class="fas fa-bullhorn"></i>
-                </button>
+                <a href="index.php?action=warningComment&amp;id=<?= $comment['id']; ?>">
+                    <button type="submit" id="alarm" class="btn btn-outline-danger">
+                        <i class="fas fa-bullhorn"></i>
+                    </button>
+                </a>
             </p>
             <p class="content-comment">
                 <?= nl2br(htmlspecialchars($comment['comment'])); ?>
