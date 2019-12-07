@@ -19,7 +19,20 @@ if (isset($_SESSION['nickname'])){
     ?>
         <form action="index.php?action=moderateComment&amp;id=<?= $comment['id']; ?>" method="post">
             <div>
-                <label for="author">Auteur</label><br>
+                <label for="author">Auteur</label>
+                <?php
+                    if (($comment['warning'])>0){
+                ?>
+                    <p>
+                        Cet auteur a été signalé : <?= $comment['warning'] .' fois'; ?>
+                    </p>
+                <?php
+                    } else {
+                ?>
+                    <br>
+                <?php
+                    }
+                ?>
                 <input type="text" id="author" name="author" value="<?= $comment['author']; ?>"/>
             </div>
             <div>
