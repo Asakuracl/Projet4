@@ -18,7 +18,7 @@
         <p class="col">Short Story</p>
         <ul class="nav">
             <li>
-                <a class="nav-link">
+                <a class="nav-link text-dark">
                     <?php
                         if (isset($_SESSION['nickname'])){
                             echo "Bonjour ". $_SESSION['nickname'];
@@ -27,13 +27,13 @@
                 </a>
             </li> 
             <li>
-                <a class="nav-link" href="/projet4/index.php">Accueil</a>
+                <a class="nav-link text-dark" href="/projet4/index.php">Accueil</a>
             </li>
             <?php
                 if (isset($_SESSION['nickname'])){
             ?>
             <li>
-                <a class="nav-link" href="/projet4/index.php?action=adminPage">Accueil Administration</a>                
+                <a class="nav-link text-dark" href="/projet4/index.php?action=adminPage">Accueil Administration</a>                
             </li>
             <?php
             }
@@ -42,11 +42,11 @@
                 <?php
                     if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
                 ?>
-                    <a class="nav-link" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
+                    <a class="nav-link text-dark" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
                 <?php
                     } else {
                 ?>
-                    <a class="nav-link" href="/projet4/index.php?action=loginPage">Se connecter</a>
+                    <a class="nav-link text-dark" href="/projet4/index.php?action=loginPage">Se connecter</a>
                 <?php
                     } 
                 ?>
