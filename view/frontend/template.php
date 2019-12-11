@@ -16,7 +16,7 @@
 <header>
     <div class="row">
         <p class="col">Short Story</p>
-        <ul class="nav">
+        <ul class="nav mb-2">
             <li>
                 <a class="nav-link text-dark">
                     <?php
@@ -27,13 +27,13 @@
                 </a>
             </li> 
             <li>
-                <a class="nav-link text-dark" href="/projet4/index.php">Accueil</a>
+                <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
             </li>
             <?php
                 if (isset($_SESSION['nickname'])){
             ?>
             <li>
-                <a class="nav-link text-dark" href="/projet4/index.php?action=adminPage">Accueil Administration</a>                
+                <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">Accueil Administration</a>                
             </li>
             <?php
             }
@@ -42,11 +42,11 @@
                 <?php
                     if (isset($_SESSION['id']) AND isset($_SESSION['nickname'])){
                 ?>
-                    <a class="nav-link text-dark" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
                 <?php
                     } else {
                 ?>
-                    <a class="nav-link text-dark" href="/projet4/index.php?action=loginPage">Se connecter</a>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">Se connecter</a>
                 <?php
                     } 
                 ?>
