@@ -30,3 +30,16 @@
 #alarm {
   border: none;
 }
+
+.underline-effect::after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background: #343a40;
+  transition: width 0.3s ease;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+}
