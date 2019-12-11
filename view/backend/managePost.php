@@ -30,6 +30,7 @@ if (isset($_SESSION['nickname'])){
                 Modifier chapitre
                 </a>
             </div>
+            <!-- php ici avec un while pour le comments, pour avertir qu'il y a des comment signaler -->
             <div>
                 <a class="text-info" href="index.php?action=moderateCommentView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modérer commentaire
