@@ -2,8 +2,8 @@
 
 <?php ob_start() ?>
 
-    <div class="row">
-        <h1 class="col-6 offset-3">Billet simple pour l'Alaska</h1>
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto px-5 my-2 ">Billet simple pour l'Alaska</h1>
     </div>
 </header>
 
@@ -12,13 +12,13 @@
     while($dataPosts= $posts->fetch())
     {
     ?>
-    <div class="news col-lg-3 rounded  border">
-        <a class="link-comment" href="index.php?action=post&amp;id=<?= $dataPosts['id']; ?>">
+    <div class="news col-lg-3 rounded bg-white">
+        <a class="text-dark" href="index.php?action=post&amp;id=<?= $dataPosts['id']; ?>">
             <h3>
                 <?= htmlspecialchars($dataPosts['title']); ?>
             </h3>
         </a>
-        <p>
+        <p class="text-black-50">
             <br>le <?= $dataPosts['creation_date_fr']; ?>
         </p>
     </div>
