@@ -23,7 +23,7 @@ if (isset($_SESSION['nickname'])){
             <textarea id="content" class="bg-light form-control" name="content"><?php echo $post['content']; ?></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-dark mt-1"/>
+            <input type="submit" class="btn btn-dark mt-1" value="Modifier"/>
         </div>
     </form>
     <p class="col-6 offset-3 mt-1">

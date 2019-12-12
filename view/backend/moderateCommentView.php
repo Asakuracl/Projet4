@@ -43,7 +43,7 @@ if (isset($_SESSION['nickname'])){
                 <textarea id="comment" class="bg-light form-control" name="comment"><?= $comment['comment']; ?></textarea>
             </div>
             <div>
-                <input type="submit" class="btn btn-dark mt-1"/>
+                <input type="submit" class="btn btn-dark mt-1" value="Modifier"/>
             </div>
         </form>
     <?php
