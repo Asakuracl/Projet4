@@ -16,7 +16,7 @@ if (isset($_SESSION['nickname'])){
     while($dataPosts= $posts->fetch())
     {
     ?>
-        <div class="col-lg-4 rounded border border-dark">
+        <div class="col-lg-4 rounded border border-dark bg-white">
             <div>
                 <h3 class="text-dark">
                     <?= htmlspecialchars($dataPosts['title']); ?>
