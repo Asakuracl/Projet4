@@ -11,13 +11,16 @@ if (isset($_SESSION['nickname'])){
 </header>
 
 
- <h2>Commentaires : </h2>
+ <h2 class="mt-1">Commentaires : </h2>
+    <p class="mt-1">
+        <a href="index.php?action=erasePost" class="text-dark">Retour</a>
+    </p>
  <section class="row mx-auto">
     <?php
     while($comment = $comments->fetch())
     {
     ?>
-        <form action="index.php?action=moderateComment&amp;id=<?= $comment['id']; ?>" class="col-sm-6 mx-auto" method="post">
+        <form action="index.php?action=moderateComment&amp;id=<?= $comment['id']; ?>" class="col-sm-7 mx-auto" method="post">
             <div class="form-group mt-3">
                 <label for="author">Auteur</label>
                 <?php
@@ -43,13 +46,13 @@ if (isset($_SESSION['nickname'])){
                 <input type="submit" class="btn btn-dark mt-1"/>
             </div>
         </form>
-        <p class="col-6 offset-3 mt-1">
-            <a href="index.php?action=erasePost" class="text-dark">Retour</a>
-        </p>
     <?php
     }
     ?>
 </section>
+<p class="mt-1">
+    <a href="index.php?action=erasePost" class="text-dark">Retour</a>
+</p>
 <?php
 }
 ?>
