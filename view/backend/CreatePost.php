@@ -2,30 +2,26 @@
 
 <?php ob_start(); ?>
 
-    <div class="row">
-        <h1 class="col-6 offset-4">Creer un chapitre</h1>
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto px-5 my-1">Creer un chapitre</h1>
     </div>
 </header>
 
-<section>
-    <form action="index.php?action=addPost" method="post">
-        <div>
+<section class="row mx-auto">
+    <form action="index.php?action=addPost" class="col-sm-6 mx-auto" method="post">
+        <div class="form-group mt-3">
             <label for="title">Titre</label><br>
-            <input type="text" id="title" name="title" />
+            <input type="text" id="title" class="bg-light form-control"  name="title" />
         </div>
-        <div>
+        <div class="form-group mx-auto">
             <label for="content">Contenu</label><br>
-            <textarea id="content" name="content"></textarea>
+            <textarea id="content" class="bg-light form-control" name="content" rows="5"></textarea>
         </div>
         <div>
-            <input type="submit" />
+            <input type="submit" class="btn btn-dark mt-1"/>
         </div>
     </form>
 </section>
-
-<?php
-//}
-?>
 
 <?php $content = ob_get_clean() ?>
 
