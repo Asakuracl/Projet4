@@ -6,33 +6,32 @@ if (isset($_SESSION['nickname'])){
 
 ?>
 
-    <div class="row">
-        <h1 class="col-6 offset-4">Administrer les chapitres</h1>
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto px-5 my-1">Administrer les chapitres</h1>
     </div>
 </header>
 
-<section class="row post">
+<section class="row post mt-3">
     <?php
     while($dataPosts= $posts->fetch())
     {
     ?>
-        <div class="col-lg-4 rounded border">
+        <div class="col-lg-4 rounded border border-dark">
             <div>
-                <h3>
+                <h3 class="text-dark">
                     <?= htmlspecialchars($dataPosts['title']); ?>
                 </h3>
-                <p>
+                <p class="text-black-50">
                     <br>le <?= $dataPosts['creation_date_fr']; ?>
                 </p>
             </div>
             <div>
-                <a class="text-info" href="index.php?action=updatePostView&amp;id=<?php echo $dataPosts['id']; ?>">
+                <a class="text-info text-dark" href="index.php?action=updatePostView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modifier chapitre
                 </a>
             </div>
-            <!-- php ici avec un while pour le comments, pour avertir qu'il y a des comment signaler -->
             <div>
-                <a class="text-info" href="index.php?action=moderateCommentView&amp;id=<?php echo $dataPosts['id']; ?>">
+                <a class="text-info text-dark" href="index.php?action=moderateCommentView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modérer commentaire
                 </a>
             </div>
