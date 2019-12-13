@@ -125,6 +125,15 @@ try{
             throw new Exception("Erreur : pas de id !");
             }
         }
+        // deletePost
+        elseif ($_GET['action'] == 'deleteComment'){
+            if (isset($_GET['id']) && $_GET['id'] > 0){
+                deleteComment($_GET['id']);
+            }
+            else {
+            throw new Exception("Erreur : merci de renseigner tous les champs");
+            }
+        }
         
     } else { 
         listPosts();
