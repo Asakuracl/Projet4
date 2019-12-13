@@ -101,3 +101,14 @@ function warningComment($warning) {
         header("Location: index.php");
     }
 }
+// deleteComment
+function deleteComment($postId){
+    $commentManager = new CommentManager();
+    $deleteComment = $commentManager->removeComment($postId);
+
+    if ($deleteComment === false){
+        die("Erreur de suppréssion du billet");
+    } else{
+        header("Location: index.php?action=erasePost");
+    }
+}
