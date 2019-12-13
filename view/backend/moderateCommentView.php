@@ -45,6 +45,11 @@ if (isset($_SESSION['nickname'])){
             <div>
                 <input type="submit" class="btn btn-dark mt-1" value="Modifier"/>
             </div>
+            <div>
+                <a class="text-danger" href="index.php?action=deleteComment&amp;id=<?php echo $comment['id']; ?>"onclick="return confirm('attention suppression définitive !')">
+                    Supprimer ?
+                </a>
+            </div>
         </form>
     <?php
     }
