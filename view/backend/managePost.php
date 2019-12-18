@@ -46,6 +46,22 @@ if (isset($_SESSION['nickname'])){
     $posts->closeCursor();
     ?>
 </section>
+<!-- test
+<section>
+    <?php
+    //while($comment= $comments->fetch())
+    {
+    ?>
+    <p>
+    <?= $comment['warning'] .' test'; ?>
+    </p>
+    <?php
+    }
+    ?>
+    
+</section>
+-->
+
 
 <?php
 }

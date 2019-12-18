@@ -35,8 +35,11 @@ function addPost($title, $content){
 //postInBackend
 function postInBackend(){
     $postManager = new PostManager();
+    //$commentManager = new CommentManager();
+    
     $posts = $postManager->getPosts();
-   
+    //$comments = $commentManager->getComments($_GET['post_id']);
+
     require('view\backend\managePost.php');
 }
 
