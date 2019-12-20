@@ -33,7 +33,7 @@ if (isset($_SESSION['nickname'])){
             <div>
                 <a class="text-info text-dark" href="index.php?action=moderateCommentView&amp;id=<?php echo $dataPosts['id']; ?>">
                 Modérer commentaire
-                </a>
+                </a>     
             </div>
             <div>
                 <a class="text-danger" href="index.php?action=deletePost&amp;id=<?php echo $dataPosts['id']; ?>"onclick="return confirm('attention suppression définitive !')">
@@ -48,17 +48,7 @@ if (isset($_SESSION['nickname'])){
 </section>
 <!-- test
 <section>
-    <?php
-    //while($comment= $comments->fetch())
-    {
-    ?>
-    <p>
-    <?= $comment['warning'] .' test'; ?>
-    </p>
-    <?php
-    }
-    ?>
-    
+
 </section>
 -->
 

@@ -35,11 +35,11 @@ function addPost($title, $content){
 //postInBackend
 function postInBackend(){
     $postManager = new PostManager();
-    //$commentManager = new CommentManager();
+    $commentManager = new CommentManager();
     
     $posts = $postManager->getPosts();
-    //$comments = $commentManager->getComments($_GET['post_id']);
 
+    //$comments = $commentManager->signalComment();
     require('view\backend\managePost.php');
 }
 
@@ -97,7 +97,6 @@ function moderateComment($postId, $author, $comment){
 function warningComment($warning) {
     $commentManager = new CommentManager();
     $warningComment = $commentManager->signalComment($warning);
-
     if ($warningComment === false){
         die("Erreur de mise à jour du billet");
     } else{
