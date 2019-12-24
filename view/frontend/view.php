@@ -13,7 +13,7 @@
     {
     ?>
     <div class="news col-lg-3 rounded bg-white">
-        <a class="text-dark" href="index.php?action=post&amp;id=<?= $dataPosts['id']; ?>">
+        <a class="text-dark text-decoration-none" href="index.php?action=post&amp;id=<?= $dataPosts['id']; ?>">
             <h3>
                 <?= htmlspecialchars($dataPosts['title']); ?>
             </h3>
