@@ -1,11 +1,5 @@
 <?php
-/*
-require_once('auth.php');
-if(!connected()){
-header('Location: index.php');
-exit();
-}
- */
+
 require_once 'Manager.php';
 
 class PostManager extends Manager
