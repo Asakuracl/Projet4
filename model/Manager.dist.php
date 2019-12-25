@@ -1,4 +1,4 @@
-// to replace manager
+<!-- to replace manager -->
 
 <?php
 class Manager
