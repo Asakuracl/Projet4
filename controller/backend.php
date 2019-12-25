@@ -1,10 +1,11 @@
 <?php
 
-require_once('model\PostManager.php');
-require_once('model\CommentManager.php');
+require_once 'model\PostManager.php';
+require_once 'model\CommentManager.php';
 
 //addmenber
-function addMember($nickname, $pass){
+function addMember($nickname, $pass)
+{
     $memberManager = new LogManager();
     $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
     $addMember = $memberManager->createMember($nickname, $pass_hash);
@@ -12,105 +13,114 @@ function addMember($nickname, $pass){
     //trying have a succes message, if add ok
     $success = null;
 
-    if ($addMember === true){
+    if ($addMember === true) {
         header("Location: view/frontend/login.php");
-        $success = "Membre ajouté !";     
-    } else{
-        die("Erreur ajout du membre"); 
+        $success = "Membre ajouté !";
+    } else {
+        die("Erreur ajout du membre");
     }
 }
 
 // addpost
-function addPost($title, $content){
+function addPost($title, $content)
+{
     $postManager = new PostManager();
     $addPost = $postManager->newPost($title, $content);
 
-    if ($addPost === false){
+    if ($addPost === false) {
         die("Erreur d'ajout du billet");
-    } else{
+    } else {
         header("Location: index.php");
     }
 }
 
 //postInBackend
-function postInBackend(){
+function postInBackend()
+{
     $postManager = new PostManager();
     $commentManager = new CommentManager();
-    
+
     $posts = $postManager->getPosts();
 
     //$comments = $commentManager->signalComment();
-    require('view\backend\managePost.php');
+    require 'view\backend\managePost.php';
 }
 
 // deletepost
-function deletePost($postId){
+function deletePost($postId)
+{
     $postManager = new PostManager();
     $deletePost = $postManager->removePost($postId);
 
-    if ($deletePost === false){
+    if ($deletePost === false) {
         die("Erreur de suppréssion du billet");
-    } else{
+    } else {
         header("Location: index.php?action=erasePost");
     }
 }
 
 //editPostView
-function editPostView(){
+function editPostView()
+{
     $postManager = new PostManager();
     $post = $postManager->getPost($_GET['id']);
 
-    require('view\backend\updatePostView.php');
+    require 'view\backend\updatePostView.php';
 }
 
 // updatepost
-function updatePost($id, $title, $content){
+function updatePost($id, $title, $content)
+{
     $postManager = new PostManager();
     $updatePost = $postManager->upgradePost($id, $title, $content);
 
-    if ($updatePost === false){
+    if ($updatePost === false) {
         die("Erreur de mise à jour du billet");
-    } else{
+    } else {
         header("Location: index.php?action=erasePost");
     }
 }
 
 //moderateCommentView
-function moderateCommentView(){
+function moderateCommentView()
+{
     $commentManager = new CommentManager();
     $comments = $commentManager->getComments($_GET['id']);
 
-    require('view\backend\moderateCommentView.php');
+    require 'view\backend\moderateCommentView.php';
 }
 // moderateComment
-function moderateComment($postId, $author, $comment){
+function moderateComment($postId, $author, $comment)
+{
     $commentManager = new CommentManager();
     $moderateComment = $commentManager->modifyComment($postId, $author, $comment);
 
-    if ($moderateComment === false){
+    if ($moderateComment === false) {
         die("Erreur de mise à jour du billet");
-    } else{
+    } else {
         header("Location: index.php?action=erasePost");
     }
 }
 //warningComment
-function warningComment($warning) {
+function warningComment($warning)
+{
     $commentManager = new CommentManager();
     $warningComment = $commentManager->signalComment($warning);
-    if ($warningComment === false){
+    if ($warningComment === false) {
         die("Erreur de mise à jour du billet");
-    } else{
+    } else {
         header("Location: index.php");
     }
 }
 // deleteComment
-function deleteComment($postId){
+function deleteComment($postId)
+{
     $commentManager = new CommentManager();
     $deleteComment = $commentManager->removeComment($postId);
 
-    if ($deleteComment === false){
+    if ($deleteComment === false) {
         die("Erreur de suppréssion du billet");
-    } else{
+    } else {
         header("Location: index.php?action=erasePost");
     }
 }

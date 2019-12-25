@@ -1,17 +1,20 @@
 <?php
 
-require_once('Manager.php');
+require_once 'Manager.php';
 
-class CommentManager  extends Manager{
-    public function getComments($postId){
-        $db =  $this->dbConnect();
+class CommentManager extends Manager
+{
+    public function getComments($postId)
+    {
+        $db = $this->dbConnect();
         $comments = $db->prepare('SELECT id, author, comment, warning, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE post_id=? ORDER BY comment_date DESC');
         $comments->execute(array($postId));
 
         return $comments;
     }
 
-    public function postComment($postId, $author, $comment){
+    public function postComment($postId, $author, $comment)
+    {
         $db = $this->dbConnect();
 
         $comments = $db->prepare('INSERT INTO comments (post_id, author, comment, warning, comment_date) VALUES(?, ?, ?, warning, Now())');
@@ -20,7 +23,8 @@ class CommentManager  extends Manager{
         return $addComment;
     }
 
-    public function modifyComment($postId, $author, $comment){
+    public function modifyComment($postId, $author, $comment)
+    {
         $db = $this->dbConnect();
 
         $modify = $db->prepare('UPDATE comments SET author=?, comment=? WHERE id=?');
@@ -29,7 +33,8 @@ class CommentManager  extends Manager{
         return $moderateComment;
     }
 
-    public function signalComment($warning){
+    public function signalComment($warning)
+    {
         $db = $this->dbConnect();
 
         $signal = $db->prepare('UPDATE comments SET warning=warning+1 WHERE id=?');
@@ -38,7 +43,8 @@ class CommentManager  extends Manager{
         return $warningComment;
     }
 
-    public function removeComment($postId){
+    public function removeComment($postId)
+    {
         $db = $this->dbConnect();
 
         $remove = $db->prepare('DELETE FROM comments WHERE id=?');
