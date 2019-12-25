@@ -41,7 +41,6 @@ try{
         //loginPage
         elseif ($_GET['action'] == 'loginPage'){
             loginPage();
-            //require('view\frontend\login.php');
         }
         
         //checklogin
@@ -51,19 +50,6 @@ try{
             if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
             checkLogin($_POST['nickname'], $_POST['pass']);
             require("view/backend/adminView.php");
-            }
-            else {
-            throw new Exception("merci de renseigner tous les champs");
-            }
-        }
-        */
-
-        /* test code 
-       
-        elseif ($_GET['action'] == 'checkLogin'){
-            if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
-            checkLogin($_POST['nickname'], $_POST['pass']);
-            //require("view/backend/adminView.php");
             }
             else {
             throw new Exception("merci de renseigner tous les champs");
