@@ -1,6 +1,6 @@
-<?php $title = "View administration"; ?>
+<?php $title = "View administration";?>
 
-<?php ob_start(); ?>
+<?php ob_start();?>
 
     <div class="row bg-dark text-light rounded">
         <h1 class="mx-auto px-5 my-1">Creer un chapitre</h1>
@@ -23,6 +23,6 @@
     </form>
 </section>
 
-<?php $content = ob_get_clean() ?>
+<?php $content = ob_get_clean()?>
 
-<?php require("template.php"); ?>
+<?php require "template.php";?>

@@ -1,11 +1,11 @@
-<?php $title = "View administration"; ?>
+<?php $title = "View administration";?>
 
-<?php ob_start(); 
+<?php
 
-if (isset($_SESSION['nickname'])){
+ob_start();
 
-?>
-
+if (isset($_SESSION['nickname'])) {
+    ?>
 
     <div class="row bg-dark text-light rounded">
         <h1 class="mx-auto px-5 my-1">Modifier les chapitres</h1>
@@ -13,14 +13,14 @@ if (isset($_SESSION['nickname'])){
 </header>
 
 <section class="row mx-auto">
-    <form action="index.php?action=updatePost&amp;id=<?php echo $post['id']; ?>" class="col-sm-6 mx-auto" method="post">
+    <form action="index.php?action=updatePost&amp;id=<?=$post['id'];?>" class="col-sm-6 mx-auto" method="post">
         <div class="form-group mt-3">
             <label for="title">Titre</label><br>
-            <input type="text" id="title" name="title" class="bg-light form-control" value="<?php echo $post['title']; ?>"/>
+            <input type="text" id="title" name="title" class="bg-light form-control" value="<?=$post['title'];?>"/>
         </div>
         <div class="form-group mx-auto">
             <label for="content">Contenu</label><br>
-            <textarea id="content" class="bg-light form-control" name="content"><?php echo $post['content']; ?></textarea>
+            <textarea id="content" class="bg-light form-control" name="content"><?=$post['content'];?></textarea>
         </div>
         <div>
             <input type="submit" class="btn btn-dark mt-1" value="Modifier"/>
@@ -35,6 +35,6 @@ if (isset($_SESSION['nickname'])){
 }
 ?>
 
-<?php $content = ob_get_clean() ?>
+<?php $content = ob_get_clean()?>
 
-<?php require("template.php"); ?>
+<?php require "template.php";?>
