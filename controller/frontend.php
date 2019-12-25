@@ -1,7 +1,4 @@
 <?php
-//session_start();
-//var_dump(session_start());
-
 require_once('model\PostManager.php');
 require_once('model\CommentManager.php');
 require_once('model\LogManager.php');
@@ -35,7 +32,6 @@ function addComment($postId, $author, $comment){
 }
 
 //verify member
-
 function loginPage(){
     $loginMessage = null;
 
