@@ -35,6 +35,35 @@ function addComment($postId, $author, $comment){
 }
 
 //verify member
+
+function loginPage(){
+    $loginMessage = null;
+
+    if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
+        checkLogin($_POST['nickname'], $_POST['pass']);
+        $loginMessage = "identifiant ou mot de passe incorrect";
+        
+    } elseif(isset($_POST['nickname']) || isset($_POST['pass'])) {
+        $loginMessage = "merci de renseigner tous les champs";
+    }
+    
+    require('view\frontend\login.php');
+}
+
+function checkLogin($nickname, $pass){
+    $logManager = new LogManager();
+    $check = $logManager->logIn($nickname, $pass);
+    $checkPass = password_verify($_POST['pass'], $check['pass']);   
+    
+    if ($checkPass) {
+        $_SESSION['id'] = $check['id'];
+        $_SESSION['nickname'] = $check['nickname'];
+
+        header("Location: index.php?action=adminPage");
+    } 
+}
+
+/* 
 function checkLogin($nickname, $pass){
     $logManager = new LogManager();
     $check = $logManager->logIn($nickname, $pass);
@@ -49,5 +78,6 @@ function checkLogin($nickname, $pass){
     } else {
         die("identifiant ou mot de passe incorrect");
     }
-}
+} 
+*/
 
