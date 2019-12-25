@@ -1,12 +1,12 @@
-<?php $title = "Administration"; ?>
+<?php $title = "Administration";?>
 
-<?php ob_start(); ?>
+<?php ob_start();?>
 </header>
 <section class="row">
 
-    <!-- addMember--> 
+    <!-- addMember-->
 
-    <!-- 
+    <!--
     <form class="col-6 offset-3" action="/projet4/index.php?action=addMember" method="post">
         <p>Enregister vos identifiants :</p>
             <div class="form-group">
@@ -19,18 +19,18 @@
     </form>
     -->
 
-    <!-- checklogin--> 
+    <!-- checklogin-->
 
     <form class="col-6 offset-3" action="/projet4/index.php?action=loginPage" method="post">
-    <?php 
-        if ($loginMessage){
+<?php
+if ($loginMessage) {
     ?>
         <div class="alert alert-danger">
-            <?= $loginMessage ?>
+            <?=$loginMessage?>
         </div>
-    <?php
-    }
-    ?>
+<?php
+}
+?>
         <p>Formulaire de connexion :</p>
             <div class="form-group">
                 <input class="form-control" type="text" name="nickname" placeholder="nom d'utilisateur">
@@ -42,6 +42,6 @@
     </form>
 </section>
 
-<?php $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean();?>
 
-<?php require("template.php"); ?>
+<?php require "template.php";?>
