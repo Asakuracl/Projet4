@@ -81,3 +81,9 @@ die("identifiant ou mot de passe incorrect");
 }
 }
  */
+
+function adminPage()
+{
+    require "view/backend/adminView.php";
+
+}

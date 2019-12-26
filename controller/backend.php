@@ -12,6 +12,11 @@ function addMember($nickname, $pass)
 
 }
 
+function createPost()
+{
+    require "view/backend/CreatePost.php";
+}
+
 // addpost
 function addPost($title, $content)
 {
