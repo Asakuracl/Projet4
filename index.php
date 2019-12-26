@@ -11,17 +11,17 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 post();
             } else {
-                throw new Exception("Erreur : aucun identifiant de billet envoyé");
+                throw new Exception("aucun identifiant de billet envoyé");
             }
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
                 } else {
-                    throw new Exception("Erreur : merci de renseigner tous les champs");
+                    throw new Exception("merci de renseigner tous les champs");
                 }
             } else {
-                throw new Exception("Erreur : aucun identifiant de billet envoyé");
+                throw new Exception("aucun identifiant de billet envoyé");
             }
         }
         // addMember
@@ -29,7 +29,7 @@ try {
             if (!empty($_POST['nickname']) && !empty($_POST['pass'])) {
                 addMember($_POST['nickname'], $_POST['pass']);
             } else {
-                throw new Exception("Erreur : merci de renseigner tous les champs");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
         //loginPage
@@ -69,7 +69,7 @@ try {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {
                 addPost($_POST['title'], $_POST['content']);
             } else {
-                throw new Exception("Erreur : merci de renseigner tous les champs");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
 
@@ -83,7 +83,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 deletePost($_GET['id']);
             } else {
-                throw new Exception("Erreur : merci de renseigner tous les champs");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
 
@@ -99,7 +99,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 updatePost($_GET['id'], $_POST['title'], $_POST['content']);
             } else {
-                throw new Exception("Erreur : pas de id !");
+                throw new Exception("pas de id !");
             }
         }
 
@@ -115,7 +115,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 moderateComment($_GET['id'], $_POST['author'], $_POST['comment']);
             } else {
-                throw new Exception("Erreur : pas de id !");
+                throw new Exception("pas de id !");
             }
         }
 
@@ -124,7 +124,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 warningComment($_GET['id']);
             } else {
-                throw new Exception("Erreur : pas de id !");
+                throw new Exception("pas de id !");
             }
         }
 
@@ -133,7 +133,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 deleteComment($_GET['id']);
             } else {
-                throw new Exception("Erreur : merci de renseigner tous les champs");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
 
