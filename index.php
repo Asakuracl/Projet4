@@ -55,23 +55,29 @@ try {
 
         //adminPage
         elseif ($_GET['action'] == 'adminPage') {
-            require "view/backend/adminView.php";
+            adminPage();
         }
 
-        // addPost
+        //creatPage
         elseif ($_GET['action'] == 'createPost') {
-            require "view/backend/CreatePost.php";
-        } elseif ($_GET['action'] == 'addPost') {
+            createPost();
+            //require "view/backend/CreatePost.php";
+        }
+
+        //addPost
+        elseif ($_GET['action'] == 'addPost') {
             if (!empty($_POST['title']) && !empty($_POST['content'])) {
                 addPost($_POST['title'], $_POST['content']);
             } else {
                 throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
+
         // postInBackend
         elseif ($_GET['action'] == 'erasePost') {
             postInBackend();
         }
+
         // deletePost
         elseif ($_GET['action'] == 'deletePost') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -80,12 +86,14 @@ try {
                 throw new Exception("Erreur : merci de renseigner tous les champs");
             }
         }
+
         //editPostView
         elseif ($_GET['action'] == 'updatePostView') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 editPostView();
             }
         }
+
         // updatePost
         elseif ($_GET['action'] == 'updatePost') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -94,12 +102,14 @@ try {
                 throw new Exception("Erreur : pas de id !");
             }
         }
+
         //moderateCommentView
         elseif ($_GET['action'] == 'moderateCommentView') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 moderateCommentView();
             }
         }
+
         //moderateComment
         elseif ($_GET['action'] == 'moderateComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -108,6 +118,7 @@ try {
                 throw new Exception("Erreur : pas de id !");
             }
         }
+
         //warningComment
         elseif ($_GET['action'] == 'warningComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
@@ -116,6 +127,7 @@ try {
                 throw new Exception("Erreur : pas de id !");
             }
         }
+
         // deletePost
         elseif ($_GET['action'] == 'deleteComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
