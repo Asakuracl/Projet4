@@ -43,6 +43,19 @@ class CommentManager extends Manager
         return $warningComment;
     }
 
+    public function getAllSignalComment()
+    {
+        $db = $this->dbConnect();
+        $getAll = $db->query('SELECT posts.id, comments.post_id, posts.title, SUM(warning) AS total
+                            FROM `posts`
+                            INNER JOIN`comments`
+                            ON posts.id = comments.post_id
+                            GROUP BY id
+                            ORDER BY id DESC');
+
+        return $getAll;
+    }
+
     public function removeComment($postId)
     {
         $db = $this->dbConnect();
