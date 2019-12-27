@@ -27,8 +27,8 @@
   box-shadow: 0 0 0.3em 0.15em rgba(35, 39, 43, 0.5) !important;
 }
 
-#alarm {
-  border: none;
+.border-h3 {
+  border-bottom: 3px solid !important;
 }
 
 .underline-effect::after {
