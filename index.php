@@ -37,20 +37,6 @@ try {
             loginPage();
         }
 
-        //checklogin
-
-        /* bon code
-        elseif ($_GET['action'] == 'checkLogin'){
-        if(!empty($_POST['nickname']) && !empty($_POST['pass'])){
-        checkLogin($_POST['nickname'], $_POST['pass']);
-        require("view/backend/adminView.php");
-        }
-        else {
-        throw new Exception("merci de renseigner tous les champs");
-        }
-        }
-         */
-
         //ADMIN//
 
         //adminPage
@@ -61,7 +47,6 @@ try {
         //creatPage
         elseif ($_GET['action'] == 'createPost') {
             createPost();
-            //require "view/backend/CreatePost.php";
         }
 
         //addPost
