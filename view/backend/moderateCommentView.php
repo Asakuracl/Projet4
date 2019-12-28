@@ -1,9 +1,9 @@
 <?php $title ="View administration";?>
 
 <?php
-ob_start();
+    ob_start();
 
-if (isset($_SESSION['nickname'])) {
+    if (isset($_SESSION['nickname'])) {
 ?>
 <div class="row bg-dark text-light rounded">
     <h1 class="mx-auto px-5 my-1">Modérer commentaire</h1>
@@ -17,23 +17,23 @@ if (isset($_SESSION['nickname'])) {
 <section class="row mx-auto">
 
     <?php
-    while ($comment = $comments->fetch()) {
+        while ($comment = $comments->fetch()) {
     ?>
     <form action="index.php?action=moderateComment&amp;id=<?=$comment['id'];?>" class="col-sm-7 mx-auto" method="post">
         <div class="form-group mt-3">
             <label for="author">Auteur</label>
             <?php
-            if (($comment['warning']) > 0) {
+                if (($comment['warning']) > 0) {
             ?>
             <p>
                 Cet auteur a été signalé : <?=$comment['warning'] . ' fois';?>
             </p>
             <?php
-            } else {
+                } else {
             ?>
             <br>
             <?php
-            }
+                }
             ?>
             <input type="text" id="author" class="bg-light form-control" name="author"
                 value="<?=$comment['author'];?>" />
@@ -53,14 +53,14 @@ if (isset($_SESSION['nickname'])) {
         </div>
     </form>
     <?php
-}
-?>
+        }
+    ?>
 </section>
 <p class="mt-1">
     <a href="index.php?action=erasePost" class="text-dark">Retour</a>
 </p>
 <?php
-}
+    }
 ?>
 
 <?php $content = ob_get_clean()?>

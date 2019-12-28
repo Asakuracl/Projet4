@@ -1,20 +1,20 @@
 <?php $title = "View administration";?>
 
 <?php
-ob_start();
+    ob_start();
 
-if (isset($_SESSION['nickname'])) {
-    ?>
-    <div class="row bg-dark text-light rounded">
-        <h1 class="mx-auto px-5 my-1">Administrer les chapitres</h1>
-    </div>
+    if (isset($_SESSION['nickname'])) {
+?>
+<div class="row bg-dark text-light rounded">
+    <h1 class="mx-auto px-5 my-1">Administrer les chapitres</h1>
+</div>
 </header>
 
 <section class="row post mt-3">
 
-<?php
-while ($dataPosts = $posts->fetch()) {
-        ?>
+    <?php
+        while ($dataPosts = $posts->fetch()) {
+    ?>
     <div class="col-lg-4 rounded border border-dark bg-white">
         <div>
             <h3 class="text-dark">
@@ -26,24 +26,24 @@ while ($dataPosts = $posts->fetch()) {
         </div>
         <div>
             <a class="text-info text-dark" href="index.php?action=updatePostView&amp;id=<?=$dataPosts['id'];?>">
-            Modifier chapitre
+                Modifier chapitre
             </a>
         </div>
         <div>
             <a class="text-info text-dark" href="index.php?action=moderateCommentView&amp;id=<?=$dataPosts['id'];?>">
-            Modérer commentaire
+                Modérer commentaire
             </a>
         </div>
         <div>
             <a class="text-danger" href="index.php?action=deletePost&amp;id=<?=$dataPosts['id'];?>"
-            onclick="return confirm('attention suppression définitive !')">
+                onclick="return confirm('attention suppression définitive !')">
                 Supprimer ?
             </a>
         </div>
     </div>
-<?php
-}
-    $posts->closeCursor();
+    <?php
+        }
+        $posts->closeCursor();
     ?>
 </section>
 
@@ -54,23 +54,23 @@ while ($dataPosts = $posts->fetch()) {
         </h3>
     </div>
     <p class="text-right text-dark">
-<?php
-while ($seeWarning = $seeWarningComment->fetch()) {
-        if ($seeWarning['total'] > 0) {
-            ?>
+        <?php
+        while ($seeWarning = $seeWarningComment->fetch()) {
+            if ($seeWarning['total'] > 0) {
+        ?>
         <i class="fas fa-circle text-warning border rounded border-dark"></i>
         <?=$seeWarning['title'];?>
         <br>
-<?php
-}
-    }
-    $seeWarningComment->closeCursor();
-    ?>
+        <?php
+        }
+            }
+            $seeWarningComment->closeCursor();
+            ?>
     </p>
 </section>
 
 <?php
-}
+    }
 ?>
 
 <?php $content = ob_get_clean()?>

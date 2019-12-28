@@ -1,13 +1,13 @@
 <?php $title = "View administration";?>
 
 <?php
-ob_start();
+    ob_start();
 
-if (isset($_SESSION['nickname'])) {
-    ?>
-    <div class="row bg-dark text-light rounded">
-        <h1 class="mx-auto px-5 my-1">Selectionner votre action</h1>
-    </div>
+    if (isset($_SESSION['nickname'])) {
+?>
+<div class="row bg-dark text-light rounded">
+    <h1 class="mx-auto px-5 my-1">Selectionner votre action</h1>
+</div>
 </header>
 
 <section>
@@ -30,7 +30,7 @@ if (isset($_SESSION['nickname'])) {
 </section>
 
 <?php
-}
+    }
 ?>
 
 <?php $content = ob_get_clean()?>
