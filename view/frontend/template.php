@@ -15,43 +15,56 @@
 
 <header>
     <div class="row">
-        <p class="col">Short Story</p>
-        <ul class="nav mb-2">
-            <li>
-                <a class="nav-link text-dark">
+    <p class="col">Short Story</p>
+        <div class="menu mt-4">
+            <div class="barContainer d-lg-none">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul class="nav mb-2">
+                <li>
+                    <a class="nav-link text-dark">
 <?php
 if (isset($_SESSION['nickname'])) {
     echo "Bonjour " . $_SESSION['nickname'];
 }
 ?>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
-            </li>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
+                </li>
 <?php
 if (isset($_SESSION['nickname'])) {
     ?>
-            <li>
-                <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">Accueil Administration</a>
-            </li>
+                <li>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">
+                        Accueil Administration
+                    </a>
+                </li>
 <?php
 }
 ?>
-            <li>
+                <li>
 <?php
 if (isset($_SESSION['id']) and isset($_SESSION['nickname'])) {
     ?>
-                    <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">Se déconnecter</a>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">
+                        Se déconnecter
+                    </a>
 <?php
 } else {
     ?>
-                    <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">Se connecter</a>
+                    <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">
+                        Se connecter
+                    </a>
 <?php
 }
 ?>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 
 <?=$content?>
