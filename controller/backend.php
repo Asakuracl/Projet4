@@ -37,8 +37,8 @@ function postInBackend()
     $commentManager = new CommentManager();
 
     $posts = $postManager->getPosts();
+    $seeWarningComment = $commentManager->getAllSignalComment();
 
-    //$comments = $commentManager->signalComment();
     require 'view\backend\managePost.php';
 }
 
