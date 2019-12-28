@@ -35,7 +35,8 @@ while ($dataPosts = $posts->fetch()) {
             </a>
         </div>
         <div>
-            <a class="text-danger" href="index.php?action=deletePost&amp;id=<?=$dataPosts['id'];?>"onclick="return confirm('attention suppression définitive !')">
+            <a class="text-danger" href="index.php?action=deletePost&amp;id=<?=$dataPosts['id'];?>"
+            onclick="return confirm('attention suppression définitive !')">
                 Supprimer ?
             </a>
         </div>
