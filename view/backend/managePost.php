@@ -13,7 +13,8 @@ if (isset($_SESSION['nickname'])) {
 <section class="row post mt-3">
 
 <?php
-while ($dataPosts = $posts->fetch()) {?>
+while ($dataPosts = $posts->fetch()) {
+        ?>
     <div class="col-lg-4 rounded border border-dark bg-white">
         <div>
             <h3 class="text-dark">
@@ -43,6 +44,28 @@ while ($dataPosts = $posts->fetch()) {?>
 }
     $posts->closeCursor();
     ?>
+</section>
+
+<section>
+    <div class="row justify-content-end">
+        <h3 class="col-lg-4 text-right text-dark border-h3 border-warning mt-3">
+            Commentaire signalé dans :
+        </h3>
+    </div>
+    <p class="text-right text-dark">
+<?php
+while ($seeWarning = $seeWarningComment->fetch()) {
+        if ($seeWarning['total'] > 0) {
+            ?>
+        <i class="fas fa-circle text-warning border rounded border-dark"></i>
+        <?=$seeWarning['title'];?>
+        <br>
+<?php
+}
+    }
+    $seeWarningComment->closeCursor();
+    ?>
+    </p>
 </section>
 
 <?php
