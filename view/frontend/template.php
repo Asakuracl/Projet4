@@ -81,8 +81,8 @@
                     style="font-size: 25px;">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
-                    style="font-size: 25px;">
+                <a href="https://www.instagram.com/asakura.cl/?hl=fr" target="_blank"
+                    class="text-dark text-decoration-none" style="font-size: 25px;">
                     <i class="fab fa-instagram"></i>
                 </a>
             </p>
