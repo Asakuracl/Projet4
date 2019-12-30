@@ -43,39 +43,3 @@
 .underline-effect:hover::after {
   width: 100%;
 }
-
-.menu {
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.barContainer {
-  background-color: #343a40;
-  width: 40px;
-  height: 40px;
-  border-radius: 25%;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 30px;
-  height: 3px;
-  margin: 8px 5px;
-  transition: 0.4s;
-}
-
-.bar1 {
-  background-color: #ff9517;
-}
-
-.bar2 {
-  background-color: #f5f0ec;
-  transform: translate(-5px, 0px);
-}
-
-.bar3 {
-  background-color: #616971;
-}
