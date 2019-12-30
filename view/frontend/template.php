@@ -16,7 +16,7 @@
 
     <header>
         <p>Short Story</p>
-        <div class="my-0">
+        <div class="my-3">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,19 +75,25 @@
 
         <footer class="border-top border-dark mt-5 text-right">
             <p>
+                <img src="public\images\miniLivre2.jpg" class="rounded-top" />
                 Jean Forteroche, prenez votre plume !
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
+                <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
+                    style="font-size: 25px;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
+                    style="font-size: 25px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </p>
             <p>
-                <a href="#" class="text-dark text-decoration-none mr-1">
+                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
                     <i class="fas fa-circle text-warning border rounded border-dark"></i>À propos
                 </a>
-                <a href="#" class="text-dark text-decoration-none mr-1">
+                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
                     <i class="fas fa-circle text-warning border rounded border-dark"></i>Mentions légales
                 </a>
-                <a href="#" class="text-dark text-decoration-none mr-1">
+                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
                     <i class="fas fa-circle text-warning border rounded border-dark"></i>Contact
                 </a>
             </p>
