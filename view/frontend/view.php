@@ -3,11 +3,11 @@
 <?php ob_start()?>
 
 <div class="row bg-dark text-light rounded">
-    <h1 class="mx-auto px-5 my-2 ">Billet simple pour l'Alaska</h1>
+    <h1 class="mx-auto">Billet simple pour l'Alaska</h1>
 </div>
 </header>
 
-<section class="first-section row">
+<section class="first-section backgroundImage row">
     <?php
         while ($dataPosts = $posts->fetch()) {
     ?>
