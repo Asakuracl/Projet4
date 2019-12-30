@@ -31,12 +31,14 @@
                 <textarea id="comment" class="bg-light form-control" name="comment"></textarea>
             </div>
             <div>
-                <input type="submit" class="btn btn-dark mb-3" />
+                <input type="submit" class="btn btn-dark mb-3"
+                    onclick=" return confirm('Confirmez-vous l\'envois du commentaire ?')" />
             </div>
         </form>
     </div>
 
-    <p class="col-6 offset-3"><a href="index.php" class="text-dark">Retour à la liste des chapitres</a>
+    <p class=" col-6 offset-3">
+        <a href="index.php" class="text-dark">Retour à la liste des chapitres</a>
     </p>
 </section>
 <section class="row">
