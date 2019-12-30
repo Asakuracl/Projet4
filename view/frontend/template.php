@@ -13,66 +13,93 @@
 </head>
 
 <body class="main-body container">
-    <!-- <div class="container"> -->
 
     <header>
-        <div class="row">
-            <p class="col">Short Story</p>
-            <div id="myNav" class="menu my-2 ml-3 overlay">
-                <div class="barContainer d-lg-none rounded">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-                <ul class="nav mb-2 overlay-content">
-                    <li>
-                        <a class="nav-link text-dark">
-                            <?php
+        <p>Short Story</p>
+        <div class="my-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav mb-2 ">
+                        <li>
+                            <a class="nav-link text-dark">
+                                <?php
                                 if (isset($_SESSION['nickname'])) {
                                     echo "Bonjour " . $_SESSION['nickname'];
                                 }
                             ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
-                    </li>
-                    <?php
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
+                        </li>
+                        <?php
                         if (isset($_SESSION['nickname'])) {
                     ?>
-                    <li>
-                        <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">
-                            Accueil Administration
-                        </a>
-                    </li>
-                    <?php
+                        <li>
+                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">
+                                Accueil Administration
+                            </a>
+                        </li>
+                        <?php
                         }
                     ?>
-                    <li>
-                        <?php
+                        <li>
+                            <?php
                             if (isset($_SESSION['id']) and isset($_SESSION['nickname'])) {
                         ?>
-                        <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">
-                            Se déconnecter
-                        </a>
-                        <?php
+                            <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">
+                                Se déconnecter
+                            </a>
+                            <?php
                             } else {
                         ?>
-                        <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">
-                            Se connecter
-                        </a>
-                        <?php
+                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">
+                                Se connecter
+                            </a>
+                            <?php
                             }
                         ?>
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
         <?=$content?>
 
+        <footer class="border-top border-dark mt-5 text-right">
+            <p>
+                Jean Forteroche, prenez votre plume !
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+            </p>
+            <p>
+                <a href="#" class="text-dark text-decoration-none mr-1">
+                    <i class="fas fa-circle text-warning border rounded border-dark"></i>À propos
+                </a>
+                <a href="#" class="text-dark text-decoration-none mr-1">
+                    <i class="fas fa-circle text-warning border rounded border-dark"></i>Mentions légales
+                </a>
+                <a href="#" class="text-dark text-decoration-none mr-1">
+                    <i class="fas fa-circle text-warning border rounded border-dark"></i>Contact
+                </a>
+            </p>
+            <p> Projet 4 formation OC </p>
+        </footer>
         <!-- script -->
+        <script src=" https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
