@@ -53,7 +53,8 @@
                 <?=htmlspecialchars($comment['author']);?>
             </span>
             <a href="index.php?action=warningComment&amp;id=<?=$comment['id'];?>">
-                <button type="submit" id="alarm" class="btn btn-outline-warning">
+                <button type="submit" id="alarm" class="btn btn-warning ml-2 mb-3"
+                    onclick=" return confirm('Confirmez-vous le signalement ?')">
                     <i class="fas fa-bullhorn"></i>
                 </button>
             </a>

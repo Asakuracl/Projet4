@@ -22,7 +22,8 @@
             <textarea id="content" class="bg-light form-control" name="content"><?=$post['content'];?></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-dark mt-1" value="Modifier" />
+            <input type="submit" class="btn btn-dark mt-1" value="Modifier"
+                onclick="return confirm('Confirmez-vous la modification ?')" />
         </div>
     </form>
     <p class="col-6 offset-3 mt-1">

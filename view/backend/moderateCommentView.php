@@ -43,7 +43,7 @@
             <textarea id="comment" class="bg-light form-control" name="comment"><?=$comment['comment'];?></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-dark mt-1" value="Modifier" />
+            <input type="submit" class="btn btn-dark mt-1" value="Modifier" onclick="return confirm('Confirmez-vous la modification ?')"/>
         </div>
         <div>
             <a class="text-danger" href="index.php?action=deleteComment&amp;id=<?=$comment['id'];?>"
