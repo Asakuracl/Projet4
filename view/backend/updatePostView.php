@@ -18,7 +18,7 @@
             <input type="text" id="title" name="title" class="bg-light form-control" value="<?=$post['title'];?>" />
         </div>
         <div class="form-group mx-auto">
-            <label for="content">Contenu</label><br>
+            <label for="newPost">Contenu</label><br>
             <textarea id="newPost" class="bg-light form-control" name="content"><?=$post['content'];?></textarea>
         </div>
         <div>
