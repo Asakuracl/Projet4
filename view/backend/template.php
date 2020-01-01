@@ -14,8 +14,8 @@
 
 <body class="main-body container">
     <header>
-        <p>Admin</p>
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-0 my-3 justify-content-end">
+            <a class="navbar-brand" href="/projet4/index.php?action=adminPage">Administration</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
