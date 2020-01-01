@@ -75,7 +75,7 @@
 
         <footer class="border-top border-dark mt-5 text-right">
             <p>
-                <img src="public\images\miniLivre2.jpg" class="rounded-top" />
+                <img src="public\images\miniLivre2.jpg" class="rounded-top" alt="little book" />
                 Jean Forteroche, prenez votre plume !
                 <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
                     style="font-size: 25px;">
