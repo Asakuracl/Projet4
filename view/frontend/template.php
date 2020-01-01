@@ -43,7 +43,7 @@
                     ?>
                         <li>
                             <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">
-                                Accueil Administration
+                                Administration
                             </a>
                         </li>
                         <?php
@@ -104,14 +104,6 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
         </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script
-            src="https://cdn.tiny.cloud/1/xcs5ihxcsh4gaznurwzojymkulh3h9cd8evxurucg20opu9z/tinymce/5/tinymce.min.js">
-        </script>
-        <script>
-        tinymce.init({
-            selector: 'textarea'
-        });
-        </script>
 </body>
 
 </html>
