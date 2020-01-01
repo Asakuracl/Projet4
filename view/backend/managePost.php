@@ -17,9 +17,9 @@
     ?>
     <div class="col-lg-4 rounded border border-dark bg-white">
         <div>
-            <h3 class="text-dark">
+            <h2 class="text-dark">
                 <?=htmlspecialchars($dataPosts['title']);?>
-            </h3>
+            </h2>
             <p class="text-black-50">
                 <br>le <?=$dataPosts['creation_date_fr'];?>
             </p>
