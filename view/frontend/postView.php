@@ -2,12 +2,11 @@
 
 <?php ob_start()?>
 
-<div class=row>
-    <h1 class="col bg-dark text-light rounded">Billet simple pour l'Alaska</h1>
-</div>
-</header>
+<section class="post pt-5">
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto">Billet simple pour l'Alaska</h1>
+    </div>
 
-<section class="row post">
     <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
         <h2>
             <u>
