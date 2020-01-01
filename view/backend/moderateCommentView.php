@@ -8,7 +8,7 @@
 
 <section class="pt-5">
     <div class="row bg-dark text-light rounded">
-        <h1 class="mx-auto px-5 my-1">Modérer commentaire</h1>
+        <h1 class="mx-auto">Modérer commentaire</h1>
     </div>
 
     <h2 class="mt-1">Commentaires : </h2>
