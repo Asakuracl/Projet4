@@ -90,7 +90,7 @@
         </script>
         <script>
         tinymce.init({
-            selector: 'textarea'
+            selector: 'textarea#newPost'
         });
         </script>
 </body>
