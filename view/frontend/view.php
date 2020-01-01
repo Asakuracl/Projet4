@@ -13,9 +13,9 @@
     ?>
     <div class="news col-lg-3 rounded bg-white">
         <a class="text-dark text-decoration-none" href="index.php?action=post&amp;id=<?=$dataPosts['id'];?>">
-            <h3>
+            <h2>
                 <?=htmlspecialchars($dataPosts['title']);?>
-            </h3>
+            </h2>
         </a>
         <p class="text-black-50">
             <br>le <?=$dataPosts['creation_date_fr'];?>
