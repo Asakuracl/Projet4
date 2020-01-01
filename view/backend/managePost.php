@@ -5,46 +5,47 @@
 
     if (isset($_SESSION['nickname'])) {
 ?>
-<div class="row bg-dark text-light rounded">
-    <h1 class="mx-auto px-5 my-1">Administrer les chapitres</h1>
-</div>
-</header>
 
-<section class="row post mt-3">
-
-    <?php
+<section class="pt-5">
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto">Administrer les chapitres</h1>
+    </div>
+    <div class="row">
+        <?php
         while ($dataPosts = $posts->fetch()) {
     ?>
-    <div class="col-lg-4 rounded border border-dark bg-white">
-        <div>
-            <h2 class="text-dark">
-                <?=htmlspecialchars($dataPosts['title']);?>
-            </h2>
-            <p class="text-black-50">
-                <br>le <?=$dataPosts['creation_date_fr'];?>
-            </p>
+        <div class="col-lg-4 rounded border border-dark bg-white">
+            <div>
+                <h2 class="text-dark">
+                    <?=htmlspecialchars($dataPosts['title']);?>
+                </h2>
+                <p class="text-black-50">
+                    <br>le <?=$dataPosts['creation_date_fr'];?>
+                </p>
+            </div>
+            <div>
+                <a class="text-info text-dark" href="index.php?action=updatePostView&amp;id=<?=$dataPosts['id'];?>">
+                    Modifier chapitre
+                </a>
+            </div>
+            <div>
+                <a class="text-info text-dark"
+                    href="index.php?action=moderateCommentView&amp;id=<?=$dataPosts['id'];?>">
+                    Modérer commentaire
+                </a>
+            </div>
+            <div>
+                <a class="text-danger" href="index.php?action=deletePost&amp;id=<?=$dataPosts['id'];?>"
+                    onclick="return confirm('attention suppression définitive !')">
+                    Supprimer ?
+                </a>
+            </div>
         </div>
-        <div>
-            <a class="text-info text-dark" href="index.php?action=updatePostView&amp;id=<?=$dataPosts['id'];?>">
-                Modifier chapitre
-            </a>
-        </div>
-        <div>
-            <a class="text-info text-dark" href="index.php?action=moderateCommentView&amp;id=<?=$dataPosts['id'];?>">
-                Modérer commentaire
-            </a>
-        </div>
-        <div>
-            <a class="text-danger" href="index.php?action=deletePost&amp;id=<?=$dataPosts['id'];?>"
-                onclick="return confirm('attention suppression définitive !')">
-                Supprimer ?
-            </a>
-        </div>
-    </div>
-    <?php
+        <?php
         }
         $posts->closeCursor();
     ?>
+    </div>
 </section>
 
 <section>

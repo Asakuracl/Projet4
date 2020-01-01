@@ -6,12 +6,10 @@
     if (isset($_SESSION['nickname'])) {
 ?>
 
-<div class="row bg-dark text-light rounded">
-    <h1 class="mx-auto px-5 my-1">Modifier les chapitres</h1>
-</div>
-</header>
-
-<section class="row mx-auto">
+<section class="pt-5">
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto">Modifier les chapitres</h1>
+    </div>
     <form action="index.php?action=updatePost&amp;id=<?=$post['id'];?>" class="col-lg-8 mx-auto" method="post">
         <div class="form-group mt-3">
             <label for="title">Titre</label><br>

@@ -5,17 +5,16 @@
 
     if (isset($_SESSION['nickname'])) {
 ?>
-<div class="row bg-dark text-light rounded">
-    <h1 class="mx-auto px-5 my-1">Modérer commentaire</h1>
-</div>
-</header>
 
-<h2 class="mt-1">Commentaires : </h2>
-<p class="mt-1">
-    <a href="index.php?action=erasePost" class="text-dark">Retour</a>
-</p>
-<section class="row mx-auto">
+<section class="pt-5">
+    <div class="row bg-dark text-light rounded">
+        <h1 class="mx-auto px-5 my-1">Modérer commentaire</h1>
+    </div>
 
+    <h2 class="mt-1">Commentaires : </h2>
+    <p class="mt-1">
+        <a href="index.php?action=erasePost" class="text-dark">Retour</a>
+    </p>
     <?php
         while ($comment = $comments->fetch()) {
     ?>
