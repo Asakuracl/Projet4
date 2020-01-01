@@ -14,11 +14,11 @@
             <input type="text" id="title" class="bg-light form-control" name="title" />
         </div>
         <div class="form-group mx-auto">
-            <label for="content">Contenu</label><br>
+            <label for="newPost">Contenu</label><br>
             <textarea id="newPost" class="bg-light form-control" name="content" rows="5"></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-dark mt-1" />
+            <input type="submit" id="submit" class="btn btn-dark mt-1" />
         </div>
     </form>
 </section>
