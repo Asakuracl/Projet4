@@ -13,7 +13,7 @@
 </head>
 
 <body class="main-body container">
-    <header class="pb-1">
+    <header class="pb-2">
         <div class="fixed-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-1 justify-content-end">
                 <a class="navbar-brand" href="/projet4/index.php?action=adminPage">Administration</a>
