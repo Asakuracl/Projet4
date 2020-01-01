@@ -19,7 +19,7 @@
     <?php
         while ($comment = $comments->fetch()) {
     ?>
-    <form action="index.php?action=moderateComment&amp;id=<?=$comment['id'];?>" class="col-sm-7 mx-auto" method="post">
+    <form action="index.php?action=moderateComment&amp;id=<?=$comment['id'];?>" class="col-lg-8 mx-auto" method="post">
         <div class="form-group mt-3">
             <label for="author">Auteur</label>
             <?php
@@ -40,10 +40,12 @@
         </div>
         <div class="form-group mx-auto">
             <label for="comment">Commentaire</label><br>
-            <textarea id="comment" class="bg-light form-control" name="comment"><?=$comment['comment'];?></textarea>
+            <textarea id="comment" class="bg-light form-control" name="comment"
+                rows="5"><?=$comment['comment'];?></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-dark mt-1" value="Modifier" onclick="return confirm('Confirmez-vous la modification ?')"/>
+            <input type="submit" class="btn btn-dark mt-1" value="Modifier"
+                onclick="return confirm('Confirmez-vous la modification ?')" />
         </div>
         <div>
             <a class="text-danger" href="index.php?action=deleteComment&amp;id=<?=$comment['id'];?>"
