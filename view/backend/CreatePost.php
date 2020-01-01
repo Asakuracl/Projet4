@@ -8,7 +8,7 @@
 </header>
 
 <section class="row mx-auto">
-    <form action="index.php?action=addPost" class="col-sm-6 mx-auto" method="post">
+    <form action="index.php?action=addPost" class="col-lg-8 mx-auto" method="post">
         <div class="form-group mt-3">
             <label for="title">Titre</label><br>
             <input type="text" id="title" class="bg-light form-control" name="title" />
