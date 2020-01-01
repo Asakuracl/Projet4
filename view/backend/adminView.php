@@ -13,18 +13,18 @@
 <section>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <h3>
+            <h2>
                 <a class="nav-link text-dark" href="index.php?action=createPost">
                     Creer un chapitre
                 </a>
-            </h3>
+            </h2>
         </li>
         <li class="nav-item">
-            <h3>
+            <h2>
                 <a class="nav-link text-dark" href="index.php?action=erasePost">
                     administrer les billets
                 </a>
-            </h3>
+            </h2>
         </li>
     </ul>
 </section>
