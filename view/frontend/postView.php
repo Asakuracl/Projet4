@@ -37,12 +37,12 @@
         </form>
     </div>
 
-    <p class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+    <p class="col-lg-6 col-md-8 mx-auto">
         <a href="index.php" class="text-dark">Retour à la liste des chapitres</a>
     </p>
 </section>
 <section class="row">
-    <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+    <div class="col-lg-6 col-md-8 mx-auto">
         <?php
             while ($comment = $comments->fetch()) {
         ?>
