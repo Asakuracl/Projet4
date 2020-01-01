@@ -15,7 +15,7 @@
 <body class="main-body container">
     <header class="pb-1">
         <div class="fixed-top">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-end">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-1 justify-content-end">
                 <a class="navbar-brand" href="/projet4/index.php?action=adminPage">Administration</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
