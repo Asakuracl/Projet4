@@ -12,11 +12,11 @@
     <title><?=$title?></title>
 </head>
 
-<body class="main-body container">
+<body class="main-body container pt-3">
 
-    <header>
-        <div class="my-3">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-end">
+    <header class="pb-1">
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-end py-1">
                 <a class="navbar-brand" href="/projet4/index.php">Short Story</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,40 +70,40 @@
                 </div>
             </nav>
         </div>
+    </header>
+    <?=$content?>
 
-        <?=$content?>
-
-        <footer class="border-top border-dark mt-5 text-right">
-            <p>
-                <img src="public\images\miniLivre2.jpg" class="rounded-top" alt="little book" />
-                Jean Forteroche, prenez votre plume !
-                <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
-                    style="font-size: 25px;">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/asakura.cl/?hl=fr" target="_blank"
-                    class="text-dark text-decoration-none" style="font-size: 25px;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </p>
-            <p>
-                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
-                    <i class="fas fa-circle text-warning border rounded border-dark"></i>À propos
-                </a>
-                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
-                    <i class="fas fa-circle text-warning border rounded border-dark"></i>Mentions légales
-                </a>
-                <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
-                    <i class="fas fa-circle text-warning border rounded border-dark"></i>Contact
-                </a>
-            </p>
-            <p> Projet 4 formation OC </p>
-        </footer>
-        <!-- script -->
-        <script src=" https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <footer class="border-top border-dark mt-5 text-right">
+        <p>
+            <img src="public\images\miniLivre2.jpg" class="rounded-top" alt="little book" />
+            Jean Forteroche, prenez votre plume !
+            <a href="https://twitter.com/neographe_org" target="_blank" class="text-dark text-decoration-none"
+                style="font-size: 25px;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/asakura.cl/?hl=fr" target="_blank" class="text-dark text-decoration-none"
+                style="font-size: 25px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </p>
+        <p>
+            <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
+                <i class="fas fa-circle text-warning border rounded border-dark"></i>À propos
+            </a>
+            <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
+                <i class="fas fa-circle text-warning border rounded border-dark"></i>Mentions légales
+            </a>
+            <a href="http://neographe.org/" class="text-dark text-decoration-none mr-1">
+                <i class="fas fa-circle text-warning border rounded border-dark"></i>Contact
+            </a>
+        </p>
+        <p> Projet 4 formation OC </p>
+    </footer>
+    <!-- script -->
+    <script src=" https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
