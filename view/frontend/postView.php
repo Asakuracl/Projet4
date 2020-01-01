@@ -9,17 +9,17 @@
 
 <section class="row post">
     <div class="col-6 offset-3">
-        <h3>
+        <h2>
             <u>
                 <?=htmlspecialchars($post['title']);?>
             </u>
-        </h3>
+        </h2>
 
         <p>
             <?=nl2br($post['content']);?>
         </p>
 
-        <h2 class="my-3">Commentaires</h2>
+        <h3 class="my-3">Commentaires</h3>
 
         <form action="index.php?action=addComment&amp;id=<?=$post['id']?>" method="post">
             <div class="form-group">
