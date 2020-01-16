@@ -16,7 +16,7 @@
 
     <header class="pb-1">
         <div class="fixed-top">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-end py-1">
+            <nav id="main" class="navbar navbar-expand-lg navbar-light bg-white justify-content-end py-1">
                 <a class="navbar-brand" href="/projet4/index.php">Short Story</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,10 +100,11 @@
         <p> Projet 4 formation OC </p>
     </footer>
     <!-- script -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src=" https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/Projet4/public/js/main.js"></script>
 </body>
 
 </html>
