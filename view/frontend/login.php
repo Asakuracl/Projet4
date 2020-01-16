@@ -2,7 +2,7 @@
 
 <?php ob_start();?>
 </header>
-<section class="row">
+<section class="row mt-5">
 
     <!-- addMember-->
 
@@ -21,7 +21,7 @@
 
     <!-- checklogin-->
 
-    <form class="col-6 offset-3" action="/projet4/index.php?action=loginPage" method="post">
+    <form class="col-6 offset-3 my-5" action="/projet4/index.php?action=loginPage" method="post">
         <?php
             if ($loginMessage) {
         ?>
