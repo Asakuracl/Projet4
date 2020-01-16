@@ -84,7 +84,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 updatePost($_GET['id'], $_POST['title'], $_POST['content']);
             } else {
-                throw new Exception("pas de id !");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
 
@@ -100,7 +100,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 moderateComment($_GET['id'], $_POST['author'], $_POST['comment']);
             } else {
-                throw new Exception("pas de id !");
+                throw new Exception("merci de renseigner tous les champs");
             }
         }
 
@@ -118,7 +118,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 deleteComment($_GET['id']);
             } else {
-                throw new Exception("merci de renseigner tous les champs");
+                throw new Exception("pas de id !");
             }
         }
 
