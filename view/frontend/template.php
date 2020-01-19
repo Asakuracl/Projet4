@@ -6,73 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <title><?=$title?></title>
 </head>
 
-<body class="main-body container pt-3">
-
-    <header class="pb-1">
-        <div class="fixed-top">
-            <nav id="main" class="navbar navbar-expand-lg navbar-light bg-white justify-content-end py-1">
-                <a class="navbar-brand" href="/projet4/index.php">Short Story</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-                    <ul class="navbar-nav mb-2 text-right">
-                        <li>
-                            <a class="nav-link text-dark">
-                                <?php
-                                if (isset($_SESSION['nickname'])) {
-                                    echo "Bonjour " . $_SESSION['nickname'];
-                                }
-                            ?>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php">Accueil</a>
-                        </li>
+<body class="main-body">
+    <header>
+        <div class="title">
+            <h2>Neographe first short !</h2>
+            <p>Talking about food !</p>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li>
+                    <a class="nav-link">
                         <?php
-                        if (isset($_SESSION['nickname'])) {
-                    ?>
-                        <li>
-                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=adminPage">
-                                Administration
-                            </a>
-                        </li>
-                        <?php
-                        }
-                    ?>
-                        <li>
-                            <?php
-                            if (isset($_SESSION['id']) and isset($_SESSION['nickname'])) {
-                        ?>
-                            <a class="nav-link text-dark underline-effect" href="/projet4/view/frontend/logout.php">
-                                Se déconnecter
-                            </a>
-                            <?php
-                            } else {
-                        ?>
-                            <a class="nav-link text-dark underline-effect" href="/projet4/index.php?action=loginPage">
-                                Se connecter
-                            </a>
-                            <?php
+                            if (isset($_SESSION['nickname'])) {
+                            echo "Bonjour " . $_SESSION['nickname'];
                             }
                         ?>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link underline-effect" href="/projet4/index.php">Accueil</a>
+                </li>
+                <li>
+                    <a class="nav-link underline-effect" href="#">
+                        On teste
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link underline-effect" href="#">
+                        La pratique
+                    </a>
+                </li>
+                <?php
+                    if (isset($_SESSION['nickname'])) {
+                ?>
+                <li>
+                    <a class="nav-link underline-effect" href="/projet4/index.php?action=adminPage">
+                        Administration
+                    </a>
+                </li>
+                <?php
+                    }
+                ?>
+                <li>
+                    <?php
+                        if (isset($_SESSION['id']) and isset($_SESSION['nickname'])) {
+                    ?>
+                    <a class="nav-link underline-effect" href="/projet4/view/frontend/logout.php">
+                        Se déconnecter
+                    </a>
+                    <?php
+                        } else {
+                    ?>
+                    <a class="nav-link underline-effect" href="/projet4/index.php?action=loginPage">
+                        Se connecter
+                    </a>
+                    <?php
+                        }
+                    ?>
+                </li>
+            </ul>
         </div>
     </header>
+
     <?=$content?>
 
+    <!-- 
     <footer class="border-top border-dark mt-5 text-right">
         <p>
             <img src="public\images\miniLivre2.jpg" class="rounded-top" alt="little book" />
@@ -99,12 +102,9 @@
         </p>
         <p> Projet 4 formation OC </p>
     </footer>
+     -->
     <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="/Projet4/public/js/main.js"></script>
+    <script src="/Projet5/public/js/main.js"></script>
 </body>
 
 </html>
