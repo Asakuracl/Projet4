@@ -97,7 +97,7 @@
                 <i class="fas fa-circle text-warning border rounded border-dark"></i>Contact
             </a>
         </p>
-        <p> Projet 4 formation OC </p>
+        <p> Projet 4 formation OC</p>
     </footer>
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
