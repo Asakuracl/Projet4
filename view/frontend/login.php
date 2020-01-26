@@ -22,15 +22,11 @@
     <!-- checklogin-->
 
     <form class="col-6 offset-3 my-5" action="/projet4/index.php?action=loginPage" method="post">
-        <?php
-            if ($loginMessage) {
-        ?>
-        <div class="alert alert-danger">
-            <?=$loginMessage?>
-        </div>
-        <?php
-            }
-        ?>
+        <?php if ($loginMessage):?>
+            <div class="alert alert-danger">
+                <?php echo $loginMessage ?>
+            </div>
+        <?php endif;?>
         <p>Formulaire de connexion :</p>
         <div class="form-group">
             <input class="form-control" type="text" name="nickname" placeholder="nom d'utilisateur">
